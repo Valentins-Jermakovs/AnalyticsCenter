@@ -93,3 +93,15 @@ h6 {
   font-family: 'IBM Plex Sans', system-ui, sans-serif;
   font-weight: 600;
 }
+
+p,
+span {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
