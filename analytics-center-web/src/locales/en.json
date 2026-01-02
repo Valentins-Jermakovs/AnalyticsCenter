@@ -1,7 +1,8 @@
 {
+  "app_title": "Analytics Center",
   "landing": {
     "hero_title": "Analytics Center",
-    "hero_subtitle": "Personal Productivity Analytics Platform",
+    "hero_subtitle": "Personal Productivity and Analytics Platform",
     "login": "Login",
     "register": "Register",
     "about_title": "About Analytics Center",

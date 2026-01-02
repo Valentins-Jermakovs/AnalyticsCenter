@@ -1,7 +1,8 @@
 {
+  "app_title": "Analītikas centrs",
   "landing": {
     "hero_title": "Analītikas centrs",
-    "hero_subtitle": "Personīgās produktivitātes analītikas platforma",
+    "hero_subtitle": "Personīgās produktivitātes un analītikas platforma",
     "login": "Pieslēgties",
     "register": "Reģistrēties",
     "about_title": "Par Analītikas Centru",

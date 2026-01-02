@@ -21,6 +21,10 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project Setup
 
+### Dependencies
+
+You will need to have Node.js and npm installed on your development machine.
+
 ```sh
 npm install
 ```

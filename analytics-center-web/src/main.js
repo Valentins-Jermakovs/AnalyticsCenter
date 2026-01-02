@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { createApp, watch } from 'vue'
 import { createPinia } from 'pinia'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -25,13 +25,13 @@ import ru from './locales/ru.json'
 // setup i18n
 import { createI18n } from 'vue-i18n'
 const i18n = createI18n({
-    locale: 'lv',           // set default language
-    fallbackLocale: 'en',   // set fallback language (if current locale is not available)
-    messages: {
-        en,
-        lv,
-        ru,
-    },
+  locale: 'lv', // set default language
+  fallbackLocale: 'en', // set fallback language (if current locale is not available)
+  messages: {
+    en,
+    lv,
+    ru,
+  },
 })
 
 const app = createApp(App)
@@ -42,3 +42,17 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
+
+// dynamically change app title
+const { locale, t } = i18n.global
+
+const UpdateTitle = () => {
+  document.title = t('app_title') // key from JSON
+}
+
+UpdateTitle() // Launch on load
+
+// watch locale changes
+watch(locale, () => {
+  UpdateTitle()
+})

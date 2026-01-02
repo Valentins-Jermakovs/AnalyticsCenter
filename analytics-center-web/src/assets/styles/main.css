@@ -3,8 +3,8 @@
 @plugin "daisyui";
 
 @plugin "daisyui/theme" {
-  name: 'light';
-  default: false;
+  name: 'ac_light';
+  default: true;
   prefersdark: false;
   color-scheme: 'light';
 
@@ -44,7 +44,7 @@
 }
 
 @plugin "daisyui/theme" {
-  name: 'dark';
+  name: 'ac_dark';
   default: false;
   prefersdark: true;
   color-scheme: 'dark';
