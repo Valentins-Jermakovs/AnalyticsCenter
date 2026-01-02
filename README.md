@@ -72,7 +72,6 @@ This project is intended as:
 
 ## Screenshots
 
-Screenshots will be added later.
 ![Login Screen](screenshot.png)
 
 ---
