@@ -1,0 +1,28 @@
+{
+  "landing": {
+    "hero_title": "Analītikas centrs",
+    "hero_subtitle": "Personīgās produktivitātes analītikas platforma",
+    "login": "Pieslēgties",
+    "register": "Reģistrēties",
+    "about_title": "Par Analītikas Centru",
+    "about_content": "Analītikas centrs ir personīgā produktivitātes platforma, kas izstrādāta, lai palīdzētu jums uzraudzīt un uzlabot ikdienas aktivitātes. Izveidota kā akadēmisks projekts, lai izpētītu datu analīzi, uzdevumu pārvaldību un produktivitātes optimizāciju."
+  },
+  "features": {
+    "title": "Galvenās funkcijas",
+    "tasks": "Uzdevumu pārvaldība",
+    "tasks_description": "Organizē un pārvaldi uzdevumus.",
+    "events": "Notikumu plānošana",
+    "events_description": "Plāno un pārvaldi notikumus.",
+    "analytics": "Analītikas panelis",
+    "analytics_description": "Vizualizē un analizē datus."
+  },
+  "CTA": {
+    "title": "Sāciet darbu šodien!",
+    "description": "Pievienojaties Analītikas Centra kopienai, lai palielināt produktivitāti un iegūt informāciju par datiem."
+  },
+  "footer": {
+    "copyright": "© 2026 Analītikas centrs. Visas tiesības aizsargātas.",
+    "privacy": "Privātuma politika",
+    "terms": "Lietošanai nosacījumi"
+  }
+}

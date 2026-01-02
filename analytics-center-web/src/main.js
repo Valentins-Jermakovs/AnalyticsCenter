@@ -17,9 +17,27 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 
 library.add(fas, far, fab)
 
+// import translations
+import en from './locales/en.json'
+import lv from './locales/lv.json'
+import ru from './locales/ru.json'
+
+// setup i18n
+import { createI18n } from 'vue-i18n'
+const i18n = createI18n({
+    locale: 'lv',           // set default language
+    fallbackLocale: 'en',   // set fallback language (if current locale is not available)
+    messages: {
+        en,
+        lv,
+        ru,
+    },
+})
+
 const app = createApp(App)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
+app.use(i18n)
 app.use(createPinia())
 app.use(router)
 

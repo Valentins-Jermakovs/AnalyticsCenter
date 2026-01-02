@@ -1,0 +1,28 @@
+{
+  "landing": {
+    "hero_title": "Analytics Center",
+    "hero_subtitle": "Personal Productivity Analytics Platform",
+    "login": "Login",
+    "register": "Register",
+    "about_title": "About Analytics Center",
+    "about_content": "Analytics Center is a personal productivity platform designed to help you monitor and improve your daily activities. Created as an academic project to explore data analysis, task management, and productivity optimization."
+  },
+  "features": {
+    "title": "Key Features",
+    "tasks": "Task Management",
+    "tasks_description": "Organize and track your tasks efficiently.",
+    "events": "Event Scheduling",
+    "events_description": "Plan and manage your events effectively.",
+    "analytics": "Analytics Dashboard",
+    "analytics_description": "Visualize and analyze your data."
+  },
+  "CTA": {
+    "title": "Get Started Today!",
+    "description": "Join Analytics Center to boost your productivity and gain insights about your data."
+  },
+  "footer": {
+    "copyright": "© 2026 Analytics Center. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
