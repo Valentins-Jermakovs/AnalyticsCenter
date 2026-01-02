@@ -1,2 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import 'tailwindcss';
 @plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: 'light';
+  default: false;
+  prefersdark: false;
+  color-scheme: 'light';
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f4f4f4;
+  --color-base-300: #e0e0e0;
+  --color-base-content: #161616;
+
+  --color-primary: #0f62fe;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #4589ff;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #78a9ff;
+  --color-accent-content: #161616;
+
+  --color-neutral: #525252;
+  --color-neutral-content: #ffffff;
+
+  --color-info: #0072c3;
+  --color-info-content: #ffffff;
+  --color-success: #24a148;
+  --color-success-content: #ffffff;
+  --color-warning: #ff832b;
+  --color-warning-content: #161616;
+  --color-error: #da1e28;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.25rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+}
+
+@plugin "daisyui/theme" {
+  name: 'dark';
+  default: false;
+  prefersdark: true;
+  color-scheme: 'dark';
+
+  --color-base-100: #161616;
+  --color-base-200: #262626;
+  --color-base-300: #393939;
+  --color-base-content: #ffffff;
+
+  --color-primary: #0f62fe;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #4589ff;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #78a9ff;
+  --color-accent-content: #161616;
+
+  --color-neutral: #6f6f6f;
+  --color-neutral-content: #ffffff;
+
+  --color-info: #0072c3;
+  --color-info-content: #ffffff;
+  --color-success: #24a148;
+  --color-success-content: #161616;
+  --color-warning: #ff832b;
+  --color-warning-content: #161616;
+  --color-error: #da1e28;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.25rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-weight: 600;
+}
