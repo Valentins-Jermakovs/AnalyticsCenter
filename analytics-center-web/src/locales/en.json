@@ -36,5 +36,50 @@
     "register": "Register",
     "switch_to_register": "Don’t have an account?",
     "switch_to_login": "Already have an account?"
+  },
+  "system": {
+    "topbar": {
+      "title": "Analytics Center",
+      "search": "Search",
+      "language": "Language",
+      "support": "Support",
+      "settings": "Settings",
+      "logout": "Logout",
+      "modals": {
+        "search": {
+          "title": "Search",
+          "placeholder": "Search...",
+          "cancel": "Cancel"
+        },
+        "language": {
+          "title": "Language",
+          "english": "English",
+          "latvian": "Latvian",
+          "russian": "Russian",
+          "cancel": "Cancel"
+        },
+        "logout": {
+          "title": "Logout",
+          "content": "Are you sure you want to logout?",
+          "confirm": "Logout",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "news": "News",
+      "library": "Library",
+      "calendar": "Calendar",
+      "notes": "Notes",
+      "analytics": "Analytics",
+      "archive": "Archive",
+      "data_analyzer": "Data Analyzer",
+      "data_compare": "Data Compare"
+    }
+  },
+  "logout": {
+    "title": "Session ended",
+    "confirm": "Home"
   }
 }

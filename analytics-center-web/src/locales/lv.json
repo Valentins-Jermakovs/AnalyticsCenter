@@ -36,5 +36,50 @@
     "register": "Reģistrēties",
     "switch_to_register": "Nav profila?",
     "switch_to_login": "Jau esi reģistrēts?"
+  },
+  "system": {
+    "topbar": {
+      "title": "Analītikas centrs",
+      "search": "Meklēt",
+      "language": "Valoda",
+      "support": "Palīdzība",
+      "settings": "Iestatījumi",
+      "logout": "Iziet",
+      "modals": {
+        "search": {
+          "title": "Meklēt",
+          "placeholder": "Meklēt...",
+          "cancel": "Aizvērt"
+        },
+        "language": {
+          "title": "Valoda",
+          "english": "Angļu",
+          "latvian": "Latviešu",
+          "russian": "Krievu",
+          "cancel": "Aizvērt"
+        },
+        "logout": {
+          "title": "Iziet",
+          "content": "Vai tiešām vēlāties izrakstīties?",
+          "confirm": "Iziet",
+          "cancel": "Atcelt"
+        }
+      }
+    },
+    "sidebar": {
+      "dashboard": "Pārskats",
+      "news": "Ziņas",
+      "library": "Bibliotēka",
+      "calendar": "Kalendārs",
+      "notes": "Notikumi",
+      "analytics": "Analītikas panelis",
+      "archive": "Arhīvs",
+      "data_analyzer": "Datu analizators",
+      "data_compare": "Datu salīdzināšana"
+    }
+  },
+  "logout": {
+    "title": "Sesija pārtraukta",
+    "confirm": "Uz sākumu"
   }
 }

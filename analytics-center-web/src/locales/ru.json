@@ -36,5 +36,50 @@
     "register": "Регистрация",
     "switch_to_register": "Нет аккаунта?",
     "switch_to_login": "Уже есть аккаунт?"
+  },
+  "system": {
+    "topbar": {
+      "title": "Центр Аналитики",
+      "search": "Поиск",
+      "language": "Язык",
+      "support": "Поддержка",
+      "settings": "Настройки",
+      "logout": "Выход",
+      "modals": {
+        "search": {
+          "title": "Поиск",
+          "placeholder": "Поиск...",
+          "cancel": "Закрыть"
+        },
+        "language": {
+          "title": "Язык",
+          "english": "Английский",
+          "latvian": "Латышский",
+          "russian": "Русский",
+          "cancel": "Закрыть"
+        },
+        "logout": {
+          "title": "Выход",
+          "description": "Вы уверены, что хотите выйти?",
+          "cancel": "Отменить",
+          "confirm": "Выход"
+        }
+      }
+    },
+    "sidebar": {
+      "dashboard": "Панель управления",
+      "news": "Новости",
+      "library": "Библиотека",
+      "calendar": "Календарь",
+      "notes": "Заметки",
+      "analytics": "Панель аналитики",
+      "archive": "Архив",
+      "data_analyzer": "Анализатор данных",
+      "data_compare": "Сравнение данных"
+    }
+  },
+  "logout": {
+    "title": "Сессия завершена",
+    "confirm": "На главную"
   }
 }

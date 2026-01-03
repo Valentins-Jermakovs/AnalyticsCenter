@@ -4,6 +4,7 @@ import LandingView from '@/views/landing/LandingView.vue' // landing page
 import LoginView from '@/views/auth/LoginView.vue' // login
 import RegisterView from '@/views/auth/RegisterView.vue' // register
 import SystemLayout from '@/components/layout/SystemLayout.vue' // system layout
+import LogoutView from '@/views/logout/LogoutView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,11 @@ const router = createRouter({
       path: '/register',
       name: 'register',
       component: RegisterView,
+    },
+    {
+      path: '/logout',
+      name: 'logout',
+      component: LogoutView,
     },
     {
       path: '/system',

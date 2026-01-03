@@ -8,7 +8,7 @@
       <SidebarItem
         v-for="(item, index) in menu"
         :key="index"
-        :title="item.title"
+        :titleKey="item.titleKey"
         :icon="item.icon"
         :toName="item.routeName"
       >
@@ -25,47 +25,47 @@ const { isSideBarOpen } = useSideBar()
 
 const menu = [
   {
-    title: 'Dashboard',
+    titleKey: 'system.sidebar.dashboard',
     icon: 'fa-solid fa-cube',
     routeName: 'dashboard',
   },
   {
-    title: 'News',
+    titleKey: 'system.sidebar.news',
     icon: 'fa-solid fa-newspaper',
     routeName: 'news',
   },
   {
-    title: 'Library',
+    titleKey: 'system.sidebar.library',
     icon: 'fa-solid fa-book',
     routeName: 'library',
   },
   {
-    title: 'Calendar',
+    titleKey: 'system.sidebar.calendar',
     icon: 'fa-solid fa-calendar',
     routeName: 'calendar',
   },
   {
-    title: 'Notes',
+    titleKey: 'system.sidebar.notes',
     icon: 'fa-solid fa-sticky-note',
     routeName: 'notes',
   },
   {
-    title: 'Analytics',
+    titleKey: 'system.sidebar.analytics',
     icon: 'fa-solid fa-eye',
     routeName: 'analytics',
   },
   {
-    title: 'Archive',
+    titleKey: 'system.sidebar.archive',
     icon: 'fa-solid fa-archive',
     routeName: 'archive',
   },
   {
-    title: 'dataAnalyzer',
+    titleKey: 'system.sidebar.data_analyzer',
     icon: 'fa-solid fa-chart-pie',
     routeName: 'dataAnalyzer',
   },
   {
-    title: 'dataCompare',
+    titleKey: 'system.sidebar.data_compare',
     icon: 'fa-solid fa-chart-line',
     routeName: 'dataCompare',
   },

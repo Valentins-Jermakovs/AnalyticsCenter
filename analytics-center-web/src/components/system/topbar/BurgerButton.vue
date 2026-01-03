@@ -1,7 +1,10 @@
 <template>
   <!-- burger -->
-  <button class="w-12 h-12 border-0 btn" @click="toggleSideBar"
-  :class="isSideBarOpen ? 'btn-neutral' : 'btn-primary'">
+  <button
+    class="w-12 h-12 border-0 btn"
+    @click="toggleSideBar"
+    :class="isSideBarOpen ? 'btn-neutral' : 'btn-primary'"
+  >
     <font-awesome-icon icon="bars" />
   </button>
 </template>
