@@ -1,7 +1,7 @@
 <template>
   <div
-    class="h-full border-r border-base-300 flex transform transition-all duration-500"
-    :class="isSideBarOpen ? 'w-full md:w-16' : 'w-0'"
+    class="h-full border-base-300 flex transform transition-all duration-500"
+    :class="isSideBarOpen ? 'w-full md:w-16 border-r' : 'w-0 border-0'"
   >
     <!-- Menu -->
     <ul class="menu menu-compact w-full overflow-visible">
