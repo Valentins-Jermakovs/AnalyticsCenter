@@ -1,7 +1,8 @@
 <template>
-    <aside class="h-full border-r border-base-300 flex flex-col items-center p-2">
+    <aside class="h-full border-r border-base-300 flex transform transition-all duration-500"
+        :class="isSideBarOpen ? 'w-full md:w-16' : 'w-0'">
         <!-- Menu -->
-        <ul class="menu gap-2">
+        <ul class="menu gap-2 w-full items-center overflow-visible">
             <SidebarItem v-for="(item, index) in menu" :key="index" :title="item.title" :icon="item.icon" :toName="item.routeName">
             </SidebarItem>
         </ul>
@@ -10,7 +11,10 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
+import { useSideBar } from '@/composables/useSideBar'
 import SidebarItem from './SidebarItem.vue'
+
+const { isSideBarOpen } = useSideBar()
 
 const router = useRouter()
 
@@ -42,7 +46,7 @@ const menu = [
     },
     {
         title: 'Analytics',
-        icon: 'fa-solid fa-chart-line',
+        icon: 'fa-solid fa-eye',
         routeName: 'analytics'
     },
     {
@@ -52,7 +56,7 @@ const menu = [
     },
     {
         title: 'dataAnalyzer',
-        icon: 'fa-solid fa-chart-line',
+        icon: 'fa-solid fa-chart-pie',
         routeName: 'dataAnalyzer'
     },
     {
