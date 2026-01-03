@@ -1,6 +1,6 @@
 <template>
   <button
-    class="w-12 h-12 border-0 btn bg-neutral hover:bg-secondary tooltip tooltip-bottom"
+    class="w-12 h-12 border-0 btn bg-base-100 hover:bg-secondary tooltip tooltip-bottom"
     :data-tip="t(titleKey)"
     @click="emit('click')"
   >

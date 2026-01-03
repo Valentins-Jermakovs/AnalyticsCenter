@@ -3,7 +3,7 @@
     <div class="w-full">
       <TopBar></TopBar>
     </div>
-    <div class="flex-1 flex h-full">
+    <div class="flex-1 flex h-0">
       <Sidebar></Sidebar>
       <!-- Scrollable child pages -->
       <div class="flex-1 bg-base-100 overflow-auto">

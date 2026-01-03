@@ -3,7 +3,7 @@
   <button
     class="w-12 h-12 border-0 btn"
     @click="toggleSideBar"
-    :class="isSideBarOpen ? 'btn-neutral' : 'btn-primary'"
+    :class="isSideBarOpen ? 'bg-base-100 hover:bg-base-300' : 'btn-primary'"
   >
     <font-awesome-icon icon="bars" />
   </button>

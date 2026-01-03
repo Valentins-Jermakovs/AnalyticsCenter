@@ -1,5 +1,7 @@
 <template>
-  <div class="flex items-center pl-2 pr-4 py-2 border-b border-base-300 justify-between">
+  <div
+    class="flex bg-base-200 items-center pl-2 pr-4 py-2 border-b border-base-300 justify-between"
+  >
     <!-- LEFT: burger + logo -->
     <div class="flex items-center gap-4">
       <burger-button></burger-button>

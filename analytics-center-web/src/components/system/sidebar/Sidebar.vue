@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-full border-base-300 flex transform transition-all duration-500"
+    class="h-full bg-base-200 border-base-300 flex transform transition-all duration-500"
     :class="isSideBarOpen ? 'w-full md:w-16 border-r' : 'w-0 border-0'"
   >
     <!-- Menu -->
