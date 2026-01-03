@@ -107,7 +107,7 @@ const router = createRouter({
           meta: {
             title: 'News',
           },
-        }
+        },
       ],
     },
   ],

@@ -44,51 +44,38 @@
 }
 
 @plugin "daisyui/theme" {
-  name: "dark";
+  name: 'dark';
   default: false;
   prefersdark: true;
-  color-scheme: "dark";
-
-  /* Основной фон и нейтралы (IBM Gray 100 / Gray 90 / Gray 80…) */
-  --color-base-100: #161616; /* Gray 100 — основной фон */ 
-  --color-base-200: #262626; /* Gray 90 — поверх базового */ 
-  --color-base-300: #393939; /* Gray 80 — контейнеры */ 
-  --color-base-content: #FFFFFF; /* Текст светлый на тёмном фоне */
-
-  /* Primary — IBM Core Blue */
-  --color-primary: #0F62FE; /* Blue 60 */ 
-  --color-primary-content: #FFFFFF;
-
-  /* Secondary — более светлый синий для акцента */
-  --color-secondary: #4589FF; /* Blue 50 */ 
-  --color-secondary-content: #FFFFFF;
-
-  /* Accent — более мягкая, но всё ещё яркая акцентная палитра */
-  --color-accent: #78A9FF; /* Blue 40 */ 
-  --color-accent-content: #161616;
-
-  /* Нейтраль (текст/иконки) */
-  --color-neutral: #6F6F6F; /* Gray 60 — второстепенные тексты */ 
-  --color-neutral-content: #FFFFFF;
-
-  /* Состояния */
-  --color-info: #0072C3; /* Cyan 60 */ 
-  --color-info-content: #FFFFFF;
-  --color-success: #24A148; /* Green 50 */ 
-  --color-success-content: #161616;
-  --color-warning: #FF832B; /* Alert 40 / orange‑like */ 
-  --color-warning-content: #161616;
-  --color-error: #DA1E28; /* Red 60 */ 
-  --color-error-content: #FFFFFF;
-
-  /* Радиусы и прочее (по желанию можно тонко настроить) */
-  --radius-selector: 0.5rem;
-  --radius-field: 0.25rem;
-  --radius-box: 0.25rem;
-
+  color-scheme: 'dark';
+  --color-base-100: oklch(20% 0 0);
+  --color-base-200: oklch(14% 0 0);
+  --color-base-300: oklch(26% 0 0);
+  --color-base-content: oklch(96% 0.001 286.375);
+  --color-primary: oklch(54% 0.245 262.881);
+  --color-primary-content: oklch(96% 0.018 272.314);
+  --color-secondary: oklch(70% 0.165 254.624);
+  --color-secondary-content: oklch(96% 0.016 293.756);
+  --color-accent: oklch(71% 0.143 215.221);
+  --color-accent-content: oklch(98% 0.019 200.873);
+  --color-neutral: oklch(37% 0.013 285.805);
+  --color-neutral-content: oklch(98% 0 0);
+  --color-info: oklch(58% 0.158 241.966);
+  --color-info-content: oklch(97% 0.013 236.62);
+  --color-success: oklch(59% 0.145 163.225);
+  --color-success-content: oklch(97% 0.021 166.113);
+  --color-warning: oklch(68% 0.162 75.834);
+  --color-warning-content: oklch(98% 0.026 102.212);
+  --color-error: oklch(59% 0.249 0.584);
+  --color-error-content: oklch(97% 0.014 343.198);
+  --radius-selector: 0rem;
+  --radius-field: 0rem;
+  --radius-box: 0rem;
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
   --border: 1px;
+  --depth: 0;
+  --noise: 0;
 }
 
 h1,

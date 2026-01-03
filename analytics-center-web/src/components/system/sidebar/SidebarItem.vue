@@ -1,20 +1,23 @@
 <template>
-
-  <RouterLink :to="{ name: toName }" class="btn w-full btn-lg md:btn-md md:btn-square md:tooltip md:tooltip-right
-    flex items-center justify-center transform transition-all duration-500" :data-tip="title" :class="[
-      isActive ? 'btn-primary' : 'btn-neutral',
-      isSideBarOpen ? 'opacity-100 left-0' : 'opacity-0 pointer-events-none -left-15'
-    ]">
+  <router-link
+    :to="{ name: toName }"
+    class="h-12 md:w-12 md:h-12 md:tooltip md:tooltip-right flex items-center justify-center transform transition-all duration-500"
+    :data-tip="title"
+    :class="[
+      isActive ? 'bg-primary' : 'bg-neutral hover:bg-secondary',
+      isSideBarOpen ? 'opacity-100 left-0' : 'opacity-0 pointer-events-none -left-15',
+    ]"
+  >
     <font-awesome-icon :icon="icon" />
     <span class="inline md:hidden ml-2">{{ title }}</span>
-  </RouterLink>
-
+  </router-link>
 </template>
 
 <script setup>
 import { useRoute } from 'vue-router'
 import { useSideBar } from '@/composables/useSideBar'
 import { computed } from 'vue'
+import router from '@/router'
 
 const { isSideBarOpen } = useSideBar()
 
