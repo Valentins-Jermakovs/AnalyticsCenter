@@ -18,13 +18,10 @@
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
 import { useSideBar } from '@/composables/useSideBar'
 import SidebarItem from './SidebarItem.vue'
 
 const { isSideBarOpen } = useSideBar()
-
-const router = useRouter()
 
 const menu = [
   {

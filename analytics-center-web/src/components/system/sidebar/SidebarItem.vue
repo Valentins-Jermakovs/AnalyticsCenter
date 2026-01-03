@@ -7,6 +7,7 @@
       isActive ? 'bg-primary' : 'bg-neutral hover:bg-secondary',
       isSideBarOpen ? 'opacity-100 left-0' : 'opacity-0 pointer-events-none -left-15',
     ]"
+    @click="handleClick"
   >
     <font-awesome-icon :icon="icon" />
     <span class="inline md:hidden ml-2">{{ title }}</span>
@@ -17,9 +18,8 @@
 import { useRoute } from 'vue-router'
 import { useSideBar } from '@/composables/useSideBar'
 import { computed } from 'vue'
-import router from '@/router'
 
-const { isSideBarOpen } = useSideBar()
+const { isSideBarOpen, toggleSideBar } = useSideBar()
 
 const props = defineProps({
   title: { type: String, required: true },
@@ -30,6 +30,12 @@ const props = defineProps({
 const currentRoute = useRoute()
 
 const isActive = computed(() => currentRoute.name === props.toName)
+
+const handleClick = () => {
+  if (window.innerWidth < 768) {
+    toggleSideBar()
+  }
+}
 </script>
 
 <style scoped></style>
