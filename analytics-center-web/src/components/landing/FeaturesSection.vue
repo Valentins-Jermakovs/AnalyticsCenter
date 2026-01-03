@@ -3,7 +3,7 @@
     <div class="container mx-auto text-center">
       <h2 class="text-3xl font-bold mb-12">{{ $t('features.title') }}</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="card shadow-lg p-6 bg-base-200 card-border border-base-300">
+        <div class="card p-6 md:bg-base-200 md:card-border md:border-base-300">
           <div class="text-4xl mb-4">
             <font-awesome-icon icon="tasks" />
           </div>
@@ -12,7 +12,7 @@
           </h3>
           <p>{{ $t('features.tasks_description') }}</p>
         </div>
-        <div class="card shadow-lg p-6 bg-base-200 card-border border-base-300">
+        <div class="card p-6 md:bg-base-200 md:card-border md:border-base-300">
           <div class="text-4xl mb-4">
             <font-awesome-icon icon="calendar-alt" />
           </div>
@@ -21,7 +21,7 @@
           </h3>
           <p>{{ $t('features.events_description') }}</p>
         </div>
-        <div class="card shadow-lg p-6 bg-base-200 card-border border-base-300">
+        <div class="card p-6 md:bg-base-200 md:card-border md:border-base-300">
           <div class="text-4xl mb-4">
             <font-awesome-icon icon="chart-bar" />
           </div>

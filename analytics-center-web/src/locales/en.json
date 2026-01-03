@@ -25,5 +25,16 @@
     "copyright": "© 2026 Analytics Center. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+  "auth": {
+    "login_title": "Sign in",
+    "register_title": "Create account",
+    "email": "Email",
+    "password": "Password",
+    "confirm_password": "Confirm password",
+    "login": "Login",
+    "register": "Register",
+    "switch_to_register": "Don’t have an account?",
+    "switch_to_login": "Already have an account?"
   }
 }

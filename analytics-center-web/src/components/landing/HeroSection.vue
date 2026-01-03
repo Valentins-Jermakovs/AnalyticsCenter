@@ -10,10 +10,10 @@
         {{ $t('landing.hero_subtitle') }}
       </p>
       <div class="flex gap-4">
-        <RouterLink to="/">
+        <RouterLink to="/login">
           <button class="btn btn-primary btn-lg">{{ $t('landing.login') }}</button>
         </RouterLink>
-        <RouterLink to="/">
+        <RouterLink to="/register">
           <button class="btn btn-neutral btn-lg">{{ $t('landing.register') }}</button>
         </RouterLink>
       </div>

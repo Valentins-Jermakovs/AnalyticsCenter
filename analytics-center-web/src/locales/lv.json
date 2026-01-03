@@ -25,5 +25,16 @@
     "copyright": "© 2026 Analītikas centrs. Visas tiesības aizsargātas.",
     "privacy": "Privātuma politika",
     "terms": "Lietošanai nosacījumi"
+  },
+  "auth": {
+    "login_title": "Autentifikācija",
+    "register_title": "Reģistrācija",
+    "email": "E-pasts",
+    "password": "Parole",
+    "confirm_password": "Atkārtot paroli",
+    "login": "Pieslēgties",
+    "register": "Reģistrēties",
+    "switch_to_register": "Nav profila?",
+    "switch_to_login": "Jau esi reģistrēts?"
   }
 }

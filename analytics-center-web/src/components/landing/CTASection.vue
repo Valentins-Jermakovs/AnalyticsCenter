@@ -6,10 +6,10 @@
         {{ $t('CTA.description') }}
       </p>
       <div class="flex justify-center gap-4">
-        <RouterLink to="/">
+        <RouterLink to="/login">
           <button class="btn btn-primary btn-lg">{{ $t('landing.login') }}</button>
         </RouterLink>
-        <RouterLink to="/">
+        <RouterLink to="/register">
           <button class="btn btn-neutral btn-lg">{{ $t('landing.register') }}</button>
         </RouterLink>
       </div>
