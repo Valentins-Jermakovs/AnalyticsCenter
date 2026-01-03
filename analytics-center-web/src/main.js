@@ -7,6 +7,11 @@ import router from './router'
 
 import '@/assets/styles/main.css'
 
+// enable axios
+import * as Vue from 'vue' // in Vue 3
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
 /* add fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 
@@ -36,6 +41,7 @@ const i18n = createI18n({
 
 const app = createApp(App)
 
+app.use(VueAxios, axios)
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(i18n)
 app.use(createPinia())
