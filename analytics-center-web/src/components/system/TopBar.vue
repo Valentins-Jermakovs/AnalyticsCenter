@@ -1,9 +1,9 @@
 <template>
-  <nav class="w-full  border-b border-base-300 pl-2 pr-4 py-2 flex items-center justify-around md:justify-between">
+  <nav class="pl-2 pr-4 border-b border-base-300  py-2 flex items-center justify-between md:justify-between">
     <!-- LEFT: burger + logo -->
     <div class="flex items-center gap-4">
       <!-- burger -->
-      <label class="btn btn-lg btn-square swap swap-rotate md:w-12 md:btn-md" >
+      <label class="swap swap-rotate md:w-12" >
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" @click="toggleSideBar"/>
 
