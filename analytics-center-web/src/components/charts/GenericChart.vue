@@ -1,8 +1,19 @@
 <template>
   <div class="bg-base-200 p-4 border border-base-300 rounded-box h-72 flex flex-col">
     <h2 class="text-lg font-semibold mb-2">{{ title }}</h2>
+
     <div class="flex-1 relative overflow-hidden">
-      <canvas ref="chartCanvas"></canvas>
+      <template v-if="hasData">
+        <canvas ref="chartCanvas"></canvas>
+      </template>
+      <template v-else>
+        <div
+          class="h-full w-full border border-base-300 bg-base-100 rounded-box flex flex-col items-center justify-center gap-5"
+        >
+          <h2 class="text-2xl opacity-50">Nav datu!</h2>
+          <font-awesome-icon icon="fa-solid fa-chart-line" size="2xl" class="opacity-50" />
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -23,7 +34,11 @@ const props = defineProps({
 
 const chartCanvas = ref(null)
 
+const hasData = props.labels?.length > 0 && props.data?.length > 0
+
 onMounted(() => {
+  if (!hasData) return
+
   new Chart(chartCanvas.value, {
     type: props.type,
     data: {
@@ -40,7 +55,7 @@ onMounted(() => {
             'rgba(218, 30, 40, 0.8)',   // red
             'rgba(0, 157, 220, 0.8)',   // cyan
             'rgba(141, 141, 141, 0.8)', // gray
-            'rgba(198, 198, 198, 0.8)', // light gray ← вместо чёрного
+            'rgba(198, 198, 198, 0.8)', // light gray
             'rgba(82, 4, 163, 0.8)',    // deep purple
             'rgba(0, 125, 121, 0.8)',   // teal
           ],
@@ -65,32 +80,20 @@ onMounted(() => {
       responsive: true,
       maintainAspectRatio: false,
       animations: {
-        tension: {
-          duration: 1000,
-          easing: 'linear',
-        },
+        tension: { duration: 1000, easing: 'linear' },
       },
-      // scales only for non pie charts
       scales:
         props.type === 'pie' || props.type === 'doughnut'
           ? {}
           : {
               x: {
-                ticks: {
-                  color: '#B0B0B0',
-                },
-                grid: {
-                  color: 'rgba(176, 176, 176, 0.5)',
-                },
+                ticks: { color: '#B0B0B0' },
+                grid: { color: 'rgba(176, 176, 176, 0.5)' },
               },
               y: {
                 beginAtZero: true,
-                ticks: {
-                  color: '#B0B0B0',
-                },
-                grid: {
-                  color: 'rgba(176, 176, 176, 0.5)',
-                },
+                ticks: { color: '#B0B0B0' },
+                grid: { color: 'rgba(176, 176, 176, 0.5)' },
               },
             },
       plugins: {

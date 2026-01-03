@@ -82,7 +82,6 @@ const navigation = [
   { titleKey: 'system.topbar.search', icon: 'fa-solid fa-magnifying-glass', modal: 'search' },
   { titleKey: 'system.topbar.language', icon: 'fa-solid fa-globe', modal: 'language' },
   { titleKey: 'system.topbar.support', icon: 'fa-solid fa-question-circle' },
-  { titleKey: 'system.topbar.settings', icon: 'fa-solid fa-gear' },
   { titleKey: 'system.topbar.logout', icon: 'fa-solid fa-circle-xmark', modal: 'logout' },
 ]
 

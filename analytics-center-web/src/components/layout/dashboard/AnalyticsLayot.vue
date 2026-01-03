@@ -10,7 +10,7 @@
         :type="chart.type"
         :labels="chart.labels"
         :data="chart.data"
-      />
+      ></GenericChart>
     </div>
   </div>
 </template>
