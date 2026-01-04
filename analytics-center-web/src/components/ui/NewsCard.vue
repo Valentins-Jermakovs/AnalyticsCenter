@@ -7,7 +7,7 @@
       <h2 class="card-title text-lg">{{ title }}</h2>
       <p class="text-sm text-base-content/70 line-clamp-3">{{ summary }}</p>
       <div class="card-actions justify-end">
-        <button class="btn btn-outline btn-info">Read more</button>
+        <button class="btn btn-outline btn-info">{{ $t('common.read') }}</button>
       </div>
     </div>
   </div>

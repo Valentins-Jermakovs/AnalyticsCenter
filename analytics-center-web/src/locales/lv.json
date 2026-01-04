@@ -67,7 +67,7 @@
       }
     },
     "sidebar": {
-      "dashboard": "Pārlūks",
+      "dashboard": "Pārluks",
       "news": "Ziņas",
       "library": "Bibliotēka",
       "calendar": "Kalendārs",
@@ -76,7 +76,110 @@
       "archive": "Arhīvs",
       "data_analyzer": "Datu analizators",
       "data_compare": "Datu salīdzināšana"
+    },
+    "dashboard": {
+      "home": {
+        "title": "Sākums",
+        "kpi": {
+          "finance": {
+            "title": "Kopēji ienākumi",
+            "description": "Pa šo mēnesi"
+          },
+          "tasks": {
+            "title": "Jauni uzdevumi",
+            "description": "Uz šodienu"
+          },
+          "projects": {
+            "title": "Aktīvi projekti",
+            "description": "Uz šo mēnesi"
+          },
+          "events": {
+            "title": "Izlaisti notikumi",
+            "description": "Par pēdējo nedēļu"
+          }
+        },
+        "progress_cards": {
+          "tasks": {
+            "title": "Mēneša uzdevumi"
+          },
+          "project": {
+            "title": "Projekta uzdevumi"
+          },
+          "articles": {
+            "title": "Izlasīti raksti"
+          },
+          "files": {
+            "title": "Apstrādāti faili"
+          }
+        },
+        "table": {
+          "columns": {
+            "date": "Datums",
+            "time": "Laiks",
+            "title": "Nosaukums",
+            "category": "Kategorija",
+            "status": "Statuss",
+            "actions": "Darbības"
+          },
+          "rows": {
+            "status": {
+              "done": "Pabeigts",
+              "in_progress": "Procesā"
+            }
+          }
+        }
+      },
+      "analytics": {
+        "title": "Analītika",
+        "charts": {
+          "activity": "Aktivitāte",
+          "profit": "Ienākumi",
+          "articles": "Izlasīti raksti",
+          "tasks_progress": "Uzdevumu progres",
+          "top_actions": "Top darbības",
+          "history": "Apmeklējumu vēsture"
+        }
+      },
+      "profile": {
+        "title": "Profils",
+        "user": {
+          "title": "Lietotājs",
+          "name": "Vārds",
+          "email": "E-pasts",
+          "role": "Lietotāja loma",
+          "roles": {
+            "admin": "Administrators",
+            "user": "Lietotājs"
+          },
+          "actions": {
+            "title": "Darbības",
+            "edit_profile": "Rediģēt profilu",
+            "change_password": "Mainīt paroli",
+            "exit": "Izrakstīties"
+          },
+          "registration_time": "Registrācijas laiks",
+          "contact_info": "Kontaktinformācija"
+        },
+        "kpi": {
+          "tasks": "Uzdevumu pabeigts",
+          "month_tasks": "Mēneša uzdevumi",
+          "week_activity": "Nedēļas aktivitāte"
+        }
+      }
     }
+  },
+  "common": {
+    "edit": "Rediģēt",
+    "delete": "Dzēst",
+    "create": "Izveidot",
+    "cancel": "Atcelt",
+    "confirm": "Apstiprināt",
+    "save": "Saglabāt",
+    "add": "Pievienot",
+    "search": "Meklēt",
+    "create_new": "Izveidot jaunu",
+    "read": "Lasīt",
+    "watch": "Skatīt"
   },
   "logout": {
     "title": "Sesija pārtraukta",

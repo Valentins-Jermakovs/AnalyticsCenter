@@ -67,7 +67,7 @@
       }
     },
     "sidebar": {
-      "dashboard": "Панель управления",
+      "dashboard": "Панель обзора",
       "news": "Новости",
       "library": "Библиотека",
       "calendar": "Календарь",
@@ -76,7 +76,110 @@
       "archive": "Архив",
       "data_analyzer": "Анализатор данных",
       "data_compare": "Сравнение данных"
+    },
+    "dashboard": {
+      "home": {
+        "title": "Панель обзора",
+        "kpi": {
+          "finance": {
+            "title": "Общий доход",
+            "description": "За этот месяц"
+          },
+          "tasks": {
+            "title": "Новые задачи",
+            "description": "На сегодня"
+          },
+          "projects": {
+            "title": "Активные проекты",
+            "description": "За этот месяц"
+          },
+          "events": {
+            "title": "Пропущенные события",
+            "description": "За последнюю неделю"
+          }
+        },
+        "progress_cards": {
+          "tasks": {
+            "title": "Задачи за месяц"
+          },
+          "project": {
+            "title": "Задачи проекта"
+          },
+          "articles": {
+            "title": "Прочитанные статьи"
+          },
+          "files": {
+            "title": "Обработанные файлы"
+          }
+        },
+        "table": {
+          "columns": {
+            "date": "Дата",
+            "time": "Время",
+            "title": "Название",
+            "category": "Категория",
+            "status": "Статус",
+            "actions": "Действия"
+          },
+          "rows": {
+            "status": {
+              "done": "Завершено",
+              "in_progress": "В процессе"
+            }
+          }
+        }
+      },
+      "analytics": {
+        "title": "Аналитика",
+        "charts": {
+          "activity": "Активность",
+          "profit": "Доход",
+          "articles": "Прочитанные статьи",
+          "tasks_progress": "Прогресс задач",
+          "top_actions": "Топ действий",
+          "history": "История посещений"
+        }
+      },
+      "profile": {
+        "title": "Профиль",
+        "user": {
+          "title": "Пользователь",
+          "name": "Имя",
+          "email": "Электронная почта",
+          "role": "Роль пользователя",
+          "roles": {
+            "admin": "Администратор",
+            "user": "Пользователь"
+          },
+          "actions": {
+            "title": "Действия",
+            "edit_profile": "Редактировать профиль",
+            "change_password": "Сменить пароль",
+            "exit": "Выйти"
+          },
+          "registration_time": "Дата регистрации",
+          "contact_info": "Контактная информация"
+        },
+        "kpi": {
+          "tasks": "Выполненные задачи",
+          "month_tasks": "Задачи за месяц",
+          "week_activity": "Активность за неделю"
+        }
+      }
     }
+  },
+  "common": {
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "create": "Создать",
+    "cancel": "Отмена",
+    "confirm": "Подтвердить",
+    "save": "Сохранить",
+    "add": "Добавить",
+    "search": "Поиск",
+    "create_new": "Создать",
+    "read": "Читать",
+    "watch": "Смотреть"
   },
   "logout": {
     "title": "Сессия завершена",

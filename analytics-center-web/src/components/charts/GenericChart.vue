@@ -48,16 +48,16 @@ onMounted(() => {
           label: props.title,
           data: props.data,
           backgroundColor: [
-            'rgba(15, 98, 254, 0.8)',   // blue
-            'rgba(36, 161, 72, 0.8)',   // green
-            'rgba(138, 63, 252, 0.8)',  // purple
-            'rgba(255, 131, 43, 0.8)',  // orange
-            'rgba(218, 30, 40, 0.8)',   // red
-            'rgba(0, 157, 220, 0.8)',   // cyan
+            'rgba(15, 98, 254, 0.8)', // blue
+            'rgba(36, 161, 72, 0.8)', // green
+            'rgba(138, 63, 252, 0.8)', // purple
+            'rgba(255, 131, 43, 0.8)', // orange
+            'rgba(218, 30, 40, 0.8)', // red
+            'rgba(0, 157, 220, 0.8)', // cyan
             'rgba(141, 141, 141, 0.8)', // gray
             'rgba(198, 198, 198, 0.8)', // light gray
-            'rgba(82, 4, 163, 0.8)',    // deep purple
-            'rgba(0, 125, 121, 0.8)',   // teal
+            'rgba(82, 4, 163, 0.8)', // deep purple
+            'rgba(0, 125, 121, 0.8)', // teal
           ],
           borderColor: [
             'rgba(15, 98, 254, 0.6)',

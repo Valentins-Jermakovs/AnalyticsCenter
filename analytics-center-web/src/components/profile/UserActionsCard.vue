@@ -1,6 +1,8 @@
 <template>
   <div class="bg-base-200 border border-base-300 rounded-box p-5 flex flex-col gap-3">
-    <h3 class="text-lg font-semibold mb-2">Действия</h3>
+    <h3 class="text-lg font-semibold mb-2">
+      {{ $t('system.dashboard.profile.user.actions.title') }}
+    </h3>
     <button
       v-for="(action, index) in actions"
       :key="index"

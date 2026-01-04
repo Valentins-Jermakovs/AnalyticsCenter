@@ -5,8 +5,9 @@
       <div class="text-lg">{{ date }}</div>
       <div class="badge badge-outline badge-info p-2 text-sm">{{ time }}</div>
       <div class="mt-2">{{ description }}</div>
+      <div class="flex-1"></div>
       <div class="card-actions justify-end pt-2">
-        <button class="btn btn-primary">View</button>
+        <button class="btn btn-primary">{{ $t('common.watch') }}</button>
       </div>
     </div>
   </div>

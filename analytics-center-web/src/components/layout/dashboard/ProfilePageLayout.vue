@@ -15,9 +15,6 @@
       <!-- Настройки / действия -->
       <UserActionsCard :actions="actions" />
     </div>
-
-    <!-- История активности / таблица -->
-    <UserActivityTable :columns="activityColumns" :rows="activityRows" />
   </div>
 </template>
 
@@ -26,20 +23,22 @@ import ProfileHeader from '@/components/profile/ProfileHeader.vue'
 import UserInfoCard from '@/components/profile/UserInfoCard.vue'
 import UserProgressCard from '@/components/profile/UserProgressCard.vue'
 import UserActionsCard from '@/components/profile/UserActionsCard.vue'
-import UserActivityTable from '@/components/profile/UserActivityTable.vue'
 
-const user = {
-  name: 'Валентин Ермаков',
-  email: 'valentin@example.com',
-  avatar: 'src/assets/avatar.jpg',
-  role: 'Пользователь',
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
+const user = computed(() => ({
+  name: 'Valentīns Jermakovs',
+  email: 'jermakovsvalentin@gmail.com',
+  role: t('system.dashboard.profile.user.roles.admin'),
   joined: '2025-06-20',
-}
+}))
 
 // Прогресс пользователя
-const progressItems = [
+const progressItems = computed(() => [
   {
-    title: 'Завершено задач',
+    title: t('system.dashboard.profile.kpi.tasks'),
     value: 78,
     max: 100,
     percent: 78,
@@ -47,7 +46,7 @@ const progressItems = [
     progressClass: 'progress-success',
   },
   {
-    title: 'Цели месяца',
+    title: t('system.dashboard.profile.kpi.month_tasks'),
     value: 3,
     max: 5,
     percent: 60,
@@ -55,29 +54,33 @@ const progressItems = [
     progressClass: 'progress-primary',
   },
   {
-    title: 'Активность недели',
+    title: t('system.dashboard.profile.kpi.week_activity'),
     value: 5,
     max: 7,
     percent: 71,
     colorClass: 'text-warning',
     progressClass: 'progress-warning',
   },
-]
+])
 
 // Действия пользователя
-const actions = [
-  { title: 'Редактировать профиль', icon: 'edit', handler: () => console.log('Edit profile') },
-  { title: 'Сменить пароль', icon: 'lock', handler: () => console.log('Change password') },
-  { title: 'Выйти', icon: 'logout', handler: () => console.log('Logout') },
-]
-
-// Таблица активности
-const activityColumns = ['Дата', 'Действие', 'Статус']
-const activityRows = [
-  { Дата: '01/01/2026', Действие: 'Загрузка файла', Статус: 'Успешно' },
-  { Дата: '02/01/2026', Действие: 'Завершение задачи', Статус: 'Выполнено' },
-  { Дата: '03/01/2026', Действие: 'Просмотр отчета', Статус: 'Прочитано' },
-]
+const actions = computed(() => [
+  {
+    title: t('system.dashboard.profile.user.actions.edit_profile'),
+    icon: 'edit',
+    handler: () => console.log('Edit profile'),
+  },
+  {
+    title: t('system.dashboard.profile.user.actions.change_password'),
+    icon: 'lock',
+    handler: () => console.log('Change password'),
+  },
+  {
+    title: t('system.dashboard.profile.user.actions.exit'),
+    icon: 'logout',
+    handler: () => console.log('Logout'),
+  },
+])
 </script>
 
 <style scoped></style>

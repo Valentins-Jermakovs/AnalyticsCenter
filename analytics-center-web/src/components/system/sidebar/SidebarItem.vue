@@ -4,7 +4,7 @@
     class="h-12 font-bold md:w-12 md:h-12 md:tooltip md:tooltip-right flex items-center justify-center transform transition-all duration-500"
     :data-tip="t(titleKey)"
     :class="[
-      isActive ? 'bg-primary' : 'bg-base-100 hover:bg-secondary',
+      isActive ? 'bg-primary text-primary-content' : 'bg-base-100 hover:bg-secondary',
       isSideBarOpen ? 'opacity-100 left-0' : 'opacity-0 pointer-events-none -left-15',
     ]"
     @click="handleClick"

@@ -5,7 +5,7 @@
       :key="index"
       @click="setActive(item.key)"
       :class="[
-        'w-32 h-16 border-t-4',
+        'w-40 h-16 border-t-4 text-nowrap',
         activeKey === item.key
           ? 'border-primary bg-neutral text-neutral-content'
           : 'border-transparent bg-base-200 hover:bg-base-300 hover:cursor-pointer',

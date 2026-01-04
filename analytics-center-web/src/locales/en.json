@@ -76,7 +76,110 @@
       "archive": "Archive",
       "data_analyzer": "Data Analyzer",
       "data_compare": "Data Compare"
+    },
+    "dashboard": {
+      "home": {
+        "title": "Dashboard",
+        "kpi": {
+          "finance": {
+            "title": "Total Revenue",
+            "description": "This month"
+          },
+          "tasks": {
+            "title": "New Tasks",
+            "description": "As of today"
+          },
+          "projects": {
+            "title": "Active Projects",
+            "description": "This month"
+          },
+          "events": {
+            "title": "Missed Events",
+            "description": "Last week"
+          }
+        },
+        "progress_cards": {
+          "tasks": {
+            "title": "Monthly Tasks"
+          },
+          "project": {
+            "title": "Project Tasks"
+          },
+          "articles": {
+            "title": "Articles Read"
+          },
+          "files": {
+            "title": "Processed Files"
+          }
+        },
+        "table": {
+          "columns": {
+            "date": "Date",
+            "time": "Time",
+            "title": "Title",
+            "category": "Category",
+            "status": "Status",
+            "actions": "Actions"
+          },
+          "rows": {
+            "status": {
+              "done": "Completed",
+              "in_progress": "In Progress"
+            }
+          }
+        }
+      },
+      "analytics": {
+        "title": "Analytics",
+        "charts": {
+          "activity": "Activity",
+          "profit": "Revenue",
+          "articles": "Articles Read",
+          "tasks_progress": "Task Progress",
+          "top_actions": "Top Actions",
+          "history": "Visit History"
+        }
+      },
+      "profile": {
+        "title": "Profile",
+        "user": {
+          "title": "User",
+          "name": "Name",
+          "email": "Email",
+          "role": "User Role",
+          "roles": {
+            "admin": "Administrator",
+            "user": "User"
+          },
+          "actions": {
+            "title": "Actions",
+            "edit_profile": "Edit Profile",
+            "change_password": "Change Password",
+            "exit": "Log Out"
+          },
+          "registration_time": "Registration Date",
+          "contact_info": "Contact Information"
+        },
+        "kpi": {
+          "tasks": "Tasks Completed",
+          "month_tasks": "Monthly Tasks",
+          "week_activity": "Weekly Activity"
+        }
+      }
     }
+  },
+  "common": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "create": "Create",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "add": "Add",
+    "search": "Search",
+    "create_new": "Create New",
+    "read": "Read",
+    "watch": "View"
   },
   "logout": {
     "title": "Session ended",

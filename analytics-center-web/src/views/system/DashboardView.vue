@@ -1,5 +1,5 @@
 <template>
-  <Header title="Pārlūks"></Header>
+  <Header :title="title"></Header>
   <NavigationPanel v-model="activePage" :buttons="navButtons" />
   <DashboardHome v-if="activePage === 'home'" />
   <AnalyticsLayot v-if="activePage === 'analytics'" />
@@ -13,13 +13,17 @@ import ProfilePage from '@/components/layout/dashboard/ProfilePageLayout.vue'
 import Header from '@/components/ui/Header.vue'
 import NavigationPanel from '@/components/ui/NavigationPanel.vue'
 
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
-const navButtons = [
-  { title: 'Home', key: 'home' },
-  { title: 'Analytics', key: 'analytics' },
-  { title: 'Profile', key: 'profile' },
-]
+const navButtons = computed(() => [
+  { title: t('system.dashboard.home.title'), key: 'home' },
+  { title: t('system.dashboard.analytics.title'), key: 'analytics' },
+  { title: t('system.dashboard.profile.title'), key: 'profile' },
+])
+
+const title = computed(() => t('system.sidebar.dashboard'))
 
 const activePage = ref('home')
 </script>

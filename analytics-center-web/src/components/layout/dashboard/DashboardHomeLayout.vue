@@ -1,16 +1,11 @@
 <template>
   <div class="flex flex-col gap-5 p-5">
-    <!-- Last news -->
-    <div class="w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
       <NewsCard
         :title="lastNews.title"
         :summary="lastNews.summary"
         :image="lastNews.image"
       ></NewsCard>
-    </div>
-
-    <!-- Last event -->
-    <div class="w-full">
       <EventCard
         :title="testEvent.title"
         :date="testEvent.date"
@@ -42,7 +37,8 @@
         :percent="item.percent"
         :colorClass="item.colorClass"
         :progressClass="item.progressClass"
-      ></ProgressCard>
+      >
+      </ProgressCard>
     </div>
 
     <!-- Activity / Data table -->
@@ -59,6 +55,10 @@ import KpiCard from '@/components/ui/KpiCard.vue'
 import NewsCard from '@/components/ui/NewsCard.vue'
 import ProgressCard from '@/components/ui/ProgressCard.vue'
 
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
 const testEvent = {
   title: 'Test event',
   date: '2023-01-01',
@@ -66,21 +66,36 @@ const testEvent = {
   description: 'This is a test event',
 }
 
-const kpis = [
-  { title: 'Личный доход', value: '1200€', desc: 'За этот месяц', colorClass: 'text-success' },
-  { title: 'Новые задачи', value: 12, desc: 'Поступило сегодня', colorClass: 'text-info' },
-  { title: 'Активные проекты', value: 4, desc: 'Текущие проекты', colorClass: 'text-primary' },
+const kpis = computed(() => [
   {
-    title: 'Пропущенные события',
+    title: t('system.dashboard.home.kpi.finance.title'),
+    value: '1200€',
+    desc: t('system.dashboard.home.kpi.finance.description'),
+    colorClass: 'text-success',
+  },
+  {
+    title: t('system.dashboard.home.kpi.tasks.title'),
+    value: 12,
+    desc: t('system.dashboard.home.kpi.tasks.description'),
+    colorClass: 'text-info',
+  },
+  {
+    title: t('system.dashboard.home.kpi.projects.title'),
+    value: 4,
+    desc: t('system.dashboard.home.kpi.projects.description'),
+    colorClass: 'text-primary',
+  },
+  {
+    title: t('system.dashboard.home.kpi.events.title'),
     value: 2,
-    desc: 'За последнюю неделю',
+    desc: t('system.dashboard.home.kpi.events.description'),
     colorClass: 'text-warning',
   },
-]
+])
 
-const progressCards = [
+const progressCards = computed(() => [
   {
-    title: 'Цели месяца',
+    title: t('system.dashboard.home.progress_cards.tasks.title'),
     value: 3,
     max: 5,
     percent: 60,
@@ -88,7 +103,7 @@ const progressCards = [
     progressClass: 'progress-primary',
   },
   {
-    title: 'Задачи в проекте',
+    title: t('system.dashboard.home.progress_cards.project.title'),
     value: 15,
     max: 20,
     percent: 75,
@@ -96,7 +111,7 @@ const progressCards = [
     progressClass: 'progress-success',
   },
   {
-    title: 'Прочитанные статьи',
+    title: t('system.dashboard.home.progress_cards.articles.title'),
     value: 8,
     max: 12,
     percent: 67,
@@ -104,38 +119,37 @@ const progressCards = [
     progressClass: 'progress-info',
   },
   {
-    title: 'Обработанные файлы',
+    title: t('system.dashboard.home.progress_cards.files.title'),
     value: 20,
     max: 50,
     percent: 40,
     colorClass: 'text-warning',
     progressClass: 'progress-warning',
   },
-]
+])
 
-const columns = ['Дата', 'Время', 'Название', 'Категория', 'Статус']
+const columns = computed(() => [
+  { key: 'date', label: t('system.dashboard.home.table.columns.date') },
+  { key: 'time', label: t('system.dashboard.home.table.columns.time') },
+  { key: 'title', label: t('system.dashboard.home.table.columns.title') },
+  { key: 'category', label: t('system.dashboard.home.table.columns.category') },
+  { key: 'status', label: t('system.dashboard.home.table.columns.status') },
+])
 
 const rows = [
   {
-    Дата: '01/01/2026',
-    Время: '10:30',
-    Название: 'Практическая работа',
-    Категория: 'Учёба',
-    Статус: 'Завершено',
+    date: '01/01/2026',
+    time: '10:30',
+    title: 'Praktiskais darbs',
+    category: 'Mācības',
+    status: 'done',
   },
   {
-    Дата: '02/01/2026',
-    Время: '14:00',
-    Название: 'Загрузка данных',
-    Категория: 'Проект',
-    Статус: 'В процессе',
-  },
-  {
-    Дата: '03/01/2026',
-    Время: '09:00',
-    Название: 'Онлайн-курс',
-    Категория: 'Обучение',
-    Статус: 'Завершено',
+    date: '02/01/2026',
+    time: '14:00',
+    title: 'Datu augšupielāde',
+    category: 'Projekts',
+    status: 'in_progress',
   },
 ]
 
