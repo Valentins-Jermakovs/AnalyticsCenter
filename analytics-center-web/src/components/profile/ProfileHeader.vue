@@ -4,7 +4,7 @@
     <div class="flex flex-col gap-1">
       <h2 class="text-2xl font-semibold">{{ user.name }}</h2>
       <p class="text-base-content/70">{{ user.role }}</p>
-      <p class="text-sm text-base-content/50">Присоединился: {{ user.joined }}</p>
+      <p class="text-sm text-base-content/50">{{ $t('system.dashboard.profile.user.registration_time') }}: {{ user.joined }}</p>
     </div>
   </div>
 </template>
