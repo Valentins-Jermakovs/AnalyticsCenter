@@ -30,6 +30,7 @@
     "login_title": "Autentifikācija",
     "register_title": "Reģistrācija",
     "email": "E-pasts",
+    "username": "Lietotājvārds",
     "password": "Parole",
     "confirm_password": "Atkārtot paroli",
     "login": "Pieslēgties",

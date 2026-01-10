@@ -10,6 +10,12 @@
     </div>
     <div class="form-control flex flex-col gap-2">
       <label class="label">
+        <span class="label-text">{{ $t('auth.username') }}</span>
+      </label>
+      <input type="text" :placeholder="$t('auth.username')" class="input input-bordered w-full" />
+    </div>
+    <div class="form-control flex flex-col gap-2">
+      <label class="label">
         <span class="label-text">{{ $t('auth.password') }}</span>
       </label>
       <input

@@ -30,6 +30,7 @@
     "login_title": "Sign in",
     "register_title": "Create account",
     "email": "Email",
+    "username": "Username",
     "password": "Password",
     "confirm_password": "Confirm password",
     "login": "Login",

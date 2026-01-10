@@ -30,6 +30,7 @@
     "login_title": "Вход",
     "register_title": "Создание аккаунта",
     "email": "Электронная почта",
+    "username": "Имя пользователя",
     "password": "Пароль",
     "confirm_password": "Подтвердите пароль",
     "login": "Вход",
