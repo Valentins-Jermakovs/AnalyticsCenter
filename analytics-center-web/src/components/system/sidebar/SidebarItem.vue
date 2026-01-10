@@ -35,7 +35,11 @@ const props = defineProps({
 
 const currentRoute = useRoute()
 
-const isActive = computed(() => currentRoute.name === props.toName)
+const isActive = computed(() =>
+  currentRoute.matched.some(
+    route => route.name === props.toName
+  )
+)
 
 const handleClick = () => {
   if (window.innerWidth < 768) {
