@@ -121,10 +121,10 @@ const router = createRouter({
               path: ':id',
               name: 'newsDetails',
               component: () => import('@/components/pages/news/newsDetailsPage.vue'),
-              props: true
-            }
-          ]
-        }
+              props: true,
+            },
+          ],
+        },
       ],
     },
   ],

@@ -1,11 +1,6 @@
 <template>
   <div class="max-w-4xl mx-auto p-6">
-    <button
-      class="btn btn-ghost mb-4"
-      @click="$router.back()"
-    >
-      ← Atpakaļ
-    </button>
+    <button class="btn btn-ghost mb-4" @click="$router.back()">← Atpakaļ</button>
 
     <div v-if="news" class="bg-base-100 p-6 rounded-box">
       <img :src="news.image" class="rounded-box mb-5" />
@@ -23,9 +18,7 @@
       </div>
     </div>
 
-    <div v-else class="text-center opacity-60">
-      Ziņa nav atrasta
-    </div>
+    <div v-else class="text-center opacity-60">Ziņa nav atrasta</div>
   </div>
 </template>
 

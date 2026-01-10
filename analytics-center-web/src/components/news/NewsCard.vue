@@ -12,7 +12,10 @@
       </p>
 
       <div class="card-actions justify-end">
-        <RouterLink :to="{ name: 'newsDetails', params: { id: news.id } }" class="btn btn-outline btn-primary btn-sm">
+        <RouterLink
+          :to="{ name: 'newsDetails', params: { id: news.id } }"
+          class="btn btn-outline btn-primary btn-sm"
+        >
           Lasīt vairāk
         </RouterLink>
       </div>
@@ -22,6 +25,6 @@
 
 <script setup>
 defineProps({
-  news: Object
+  news: Object,
 })
 </script>
