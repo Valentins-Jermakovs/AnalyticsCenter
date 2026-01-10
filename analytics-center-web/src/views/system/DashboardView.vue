@@ -1,5 +1,5 @@
 <template>
-  <Header :title="title"></Header>
+  <Header :title="title" :imageUrl="image"></Header>
   <NavigationPanel v-model="activePage" :buttons="navButtons" />
   <DashboardHome v-if="activePage === 'home'" />
   <AnalyticsLayot v-if="activePage === 'analytics'" />
@@ -24,6 +24,8 @@ const navButtons = computed(() => [
 ])
 
 const title = computed(() => t('system.sidebar.dashboard'))
+import newsImage from '@/assets/images/milad-fakurian-G5fdwRVoi4Q-unsplash.jpg'
+const image = newsImage
 
 const activePage = ref('home')
 </script>

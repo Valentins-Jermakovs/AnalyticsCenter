@@ -16,7 +16,7 @@
           :to="{ name: 'newsDetails', params: { id: news.id } }"
           class="btn btn-outline btn-primary btn-sm"
         >
-          Lasīt vairāk
+          {{ $t('common.read') }}
         </RouterLink>
       </div>
     </div>

@@ -167,6 +167,16 @@
           "week_activity": "Nedēļas aktivitāte"
         }
       }
+    },
+    "news": {
+      "title": "Jaunumi",
+      "list": "Ziņu saraksts",
+      "admin": "Ziņu administrēšana",
+      "create_title": "Izveidot jauno ziņu",
+      "edit_title": "Rediģēt ziņu",
+      "delete_title": "Dzēst ziņu",
+      "delete_confirm": "Vai tiešām vēlaties dzēst šo ziņu",
+      "empty_fields": "Lūdzu, aizpildiet visus obligātos laukus"
     }
   },
   "common": {
@@ -180,7 +190,23 @@
     "search": "Meklēt",
     "create_new": "Izveidot jaunu",
     "read": "Lasīt",
-    "watch": "Skatīt"
+    "watch": "Skatīt",
+    "title": "Nosaukums",
+    "description": "Apraksts",
+    "content": "Saturs",
+    "image_URL": "Attēla URL"
+  },
+  "columns": {
+    "date": "Datums",
+    "time": "Laiks",
+    "title": "Nosaukums",
+    "category": "Kategorija",
+    "status": "Statuss",
+    "actions": "Darbības",
+    "created_at": "Izveides datums",
+    "updated_at": "Atjaunošanas datums",
+    "description": "Apraksts",
+    "content": "Saturs"
   },
   "logout": {
     "title": "Sesija pārtraukta",

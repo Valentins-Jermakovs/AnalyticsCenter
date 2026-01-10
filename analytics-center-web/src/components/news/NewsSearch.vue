@@ -3,7 +3,7 @@
     <div class="flex flex-1 gap-3">
       <input
         class="input input-bordered bg-base-200 w-full"
-        placeholder="Meklešana"
+        :placeholder="$t('common.search')"
         v-model="store.search"
       />
     </div>

@@ -129,11 +129,11 @@ const progressCards = computed(() => [
 ])
 
 const columns = computed(() => [
-  { key: 'date', label: t('system.dashboard.home.table.columns.date') },
-  { key: 'time', label: t('system.dashboard.home.table.columns.time') },
-  { key: 'title', label: t('system.dashboard.home.table.columns.title') },
-  { key: 'category', label: t('system.dashboard.home.table.columns.category') },
-  { key: 'status', label: t('system.dashboard.home.table.columns.status') },
+  { key: 'date', label: t('columns.date') },
+  { key: 'time', label: t('columns.time') },
+  { key: 'title', label: t('columns.title') },
+  { key: 'category', label: t('columns.category') },
+  { key: 'status', label: t('columns.status') },
 ])
 
 const rows = [

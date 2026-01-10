@@ -49,11 +49,11 @@ const emit = defineEmits(['update:modelValue', 'confirm'])
 
 const close = () => {
   emit('update:modelValue', false)
+  emit('cancel')
 }
 
 const confirm = () => {
   emit('confirm')
-  close()
 }
 </script>
 
