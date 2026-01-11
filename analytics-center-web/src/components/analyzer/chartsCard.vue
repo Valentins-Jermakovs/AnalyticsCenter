@@ -4,7 +4,7 @@
       group
       bg-base-200 border border-base-300
       p-6
-      min-h-[140px] sm:min-h-[160px]
+      min-h-35 sm:min-h-45
       flex items-start justify-between gap-6
       transition-all duration-200
       hover:shadow-md

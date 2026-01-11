@@ -79,6 +79,11 @@ const router = createRouter({
               path: '',
               name: 'dataAnalyzerPage',
               component: () => import('@/components/pages/dataAnalyzer/analyzerPage.vue'),
+            },
+            {
+              path: 'visualization',
+              name: 'visualization',
+              component: () => import('@/components/pages/dataAnalyzer/visualisationPage.vue'),
             }
           ]
         },
