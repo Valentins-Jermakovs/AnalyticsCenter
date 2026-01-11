@@ -4,7 +4,7 @@
     :style="{ backgroundImage: `url(${imageUrl})` }"
   >
     <h1
-      class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light ml-4 sm:ml-6 md:ml-10 lg:ml-25"
+      class="text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl font-light ml-4 sm:ml-6 md:ml-10 lg:ml-25"
     >
       {{ title }}
     </h1>

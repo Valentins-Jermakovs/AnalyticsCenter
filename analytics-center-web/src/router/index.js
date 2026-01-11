@@ -73,6 +73,14 @@ const router = createRouter({
           meta: {
             title: 'Data Analyzer',
           },
+          redirect: { name: 'dataAnalyzerPage' },
+          children: [
+            {
+              path: '',
+              name: 'dataAnalyzerPage',
+              component: () => import('@/components/pages/dataAnalyzer/analyzerPage.vue'),
+            }
+          ]
         },
         {
           path: 'dataCompare',
