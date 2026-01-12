@@ -5,13 +5,13 @@ import { ref, computed } from 'vue'
 export const useChartStore = defineStore('charts', () => {
   // user chart object
   const userChart = ref({
-    type: 'line', // clear after testing
-    title: 'Mēnešu pārdošana',
-    chartTitle: 'Mēnešu pārdošana',
-    description: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
-    xAxis: 'Jan,Feb,Mar,Apr,May',
-    seriesLabels: ['2025', '2026'],
-    seriesData: ['10,15,18,21,25', '12,18,22,28,35'],
+    type: '',
+    title: '',
+    chartTitle: '',
+    description: '',
+    xAxis: '',
+    seriesLabels: [''],
+    seriesData: [''],
   })
 
   function addChart(chart) {

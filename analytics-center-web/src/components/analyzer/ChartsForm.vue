@@ -180,24 +180,31 @@ const checkXAxis = () => {
 }
 // check Y axis for containing only numbers, points and spaces and comma
 const checkAllYSeries = () => {
+  let expectedLength = null
+
   for (let i = 0; i < userChart.seriesData.length; i++) {
     const yValue = userChart.seriesData[i]
 
-    // only numbers, points and spaces
-    if (!/^[0-9., ]+$/.test(yValue)) {
-      errorMessage.value = `Grafika ${i + 1} Y ass vērtības drīkst saturēt tikai ciparus, punktus un komatus`
+    // split by comma
+    const numbers = yValue.split(',').map(v => v.trim())
+
+    // check each number individually
+    if (numbers.some(v => v === '' || isNaN(Number(v)))) {
+      errorMessage.value = `Grafika ${i + 1} Y ass vērtības drīkst saturēt tikai ciparus`
       errorModal.value = true
       return false
     }
 
-    // check for numbers
-    const numbers = yValue.split(',').map(v => v.trim())
-    if (numbers.some(v => v === '' || isNaN(Number(v)))) {
-      errorMessage.value = `Grafika ${i + 1} Y ass vērtības drīkst saturēt tikai ciparus, punktus un komatus`
+    // check for equal length
+    if (expectedLength === null) {
+      expectedLength = numbers.length
+    } else if (numbers.length !== expectedLength) {
+      errorMessage.value = `Visām Y ass sērijām jābūt vienādam skaitam datu punktu!`
       errorModal.value = true
       return false
     }
   }
+
   return true
 }
 // validate chart form
