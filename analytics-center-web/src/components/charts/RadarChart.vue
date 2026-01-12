@@ -21,18 +21,10 @@ import {
   RadialLinearScale,
   PointElement,
   LineElement,
-  Filler
+  Filler,
 } from 'chart.js'
 
-ChartJS.register(
-  Title,
-  Tooltip,
-  Legend,
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler
-)
+ChartJS.register(Title, Tooltip, Legend, RadialLinearScale, PointElement, LineElement, Filler)
 
 const colors = [
   'rgb(54, 162, 235)',
@@ -40,7 +32,7 @@ const colors = [
   'rgb(255, 99, 132)',
   'rgb(255, 206, 86)',
   'rgb(75, 192, 192)',
-  'rgb(153, 102, 255)'
+  'rgb(153, 102, 255)',
 ]
 
 export default {
@@ -50,16 +42,16 @@ export default {
   props: {
     series: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     labels: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     title: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
   },
 
   computed: {
@@ -67,7 +59,7 @@ export default {
       return (
         this.labels.length > 0 &&
         this.series.length > 0 &&
-        this.series.some(s => Array.isArray(s.data) && s.data.length > 0)
+        this.series.some((s) => Array.isArray(s.data) && s.data.length > 0)
       )
     },
 
@@ -81,15 +73,13 @@ export default {
             label: item.label ?? `Dataset ${index + 1}`,
             data: item.data,
             borderColor: color,
-            backgroundColor: color
-              .replace('rgb', 'rgba')
-              .replace(')', ', 0.25)'),
+            backgroundColor: color.replace('rgb', 'rgba').replace(')', ', 0.25)'),
             borderWidth: 2,
             pointRadius: 3,
             pointHoverRadius: 5,
-            fill: true
+            fill: true,
           }
-        })
+        }),
       }
     },
 
@@ -99,41 +89,41 @@ export default {
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            position: 'top'
+            position: 'top',
           },
           title: {
             display: !!this.title,
             text: this.title,
-            font: { size: 16 }
+            font: { size: 16 },
           },
           tooltip: {
-            padding: 16
-          }
+            padding: 16,
+          },
         },
         scales: {
           r: {
             beginAtZero: true,
             angleLines: {
-              color: 'rgba(176,176,176,0.4)'
+              color: 'rgba(176,176,176,0.4)',
             },
             grid: {
-              color: 'rgba(176,176,176,0.4)'
+              color: 'rgba(176,176,176,0.4)',
             },
             pointLabels: {
               color: '#B0B0B0',
               font: {
-                size: 12
-              }
+                size: 12,
+              },
             },
             ticks: {
               color: '#B0B0B0',
-              backdropColor: 'transparent'
-            }
-          }
-        }
+              backdropColor: 'transparent',
+            },
+          },
+        },
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

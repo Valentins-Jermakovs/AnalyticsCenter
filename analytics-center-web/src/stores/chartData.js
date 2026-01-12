@@ -35,33 +35,38 @@ export const useChartStore = defineStore('charts', () => {
     const chart = { ...userChart.value }
 
     // labels
-    const labels = chart.xAxis.split(',').map(label => label.trim())
+    const labels = chart.xAxis.split(',').map((label) => label.trim())
 
     // series
     const series = chart.seriesData.map((dataStr, i) => ({
       label: chart.seriesLabels[i] || `Series ${i + 1}`,
       // label - get label from seriesLabels for each series
       // if seriesLabels is empty, use default label
-      data: dataStr.split(',').map(n => Number(n.trim()))
+      data: dataStr.split(',').map((n) => Number(n.trim())),
       // data - get data from seriesData for each series, and convert to number
     }))
 
     return {
       labels,
-      series
+      series,
     }
   })
 
+  const pieData = computed(() => {
+    const series = normalizeChartData.value?.series
+    return Array.isArray(series) && series.length > 0 ? series[0].data : []
+  })
+
   const seriesStats = computed(() =>
-    normalizeChartData.value.series.map(s => {
+    normalizeChartData.value.series.map((s) => {
       const sum = Number(s.data.reduce((a, b) => a + b, 0).toFixed(2))
       const avg = Number((sum / s.data.length).toFixed(2))
       const min = Number(Math.min(...s.data).toFixed(2))
       const max = Number(Math.max(...s.data).toFixed(2))
-      const diff = s.data.map((v, i, a) => i === 0 ? 0 : Number((v - a[i - 1]).toFixed(2)))
+      const diff = s.data.map((v, i, a) => (i === 0 ? 0 : Number((v - a[i - 1]).toFixed(2))))
       return { label: s.label, sum, avg, min, max, diff }
-    })
+    }),
   )
 
-  return { userChart, addChart, clearChart, normalizeChartData, seriesStats }
+  return { userChart, addChart, clearChart, normalizeChartData, seriesStats, pieData }
 })

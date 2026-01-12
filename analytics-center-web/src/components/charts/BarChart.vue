@@ -20,17 +20,10 @@ import {
   Legend,
   BarElement,
   LinearScale,
-  CategoryScale
+  CategoryScale,
 } from 'chart.js'
 
-ChartJS.register(
-  Title,
-  Tooltip,
-  Legend,
-  BarElement,
-  LinearScale,
-  CategoryScale
-)
+ChartJS.register(Title, Tooltip, Legend, BarElement, LinearScale, CategoryScale)
 
 const colors = [
   'rgb(54, 162, 235)',
@@ -38,7 +31,7 @@ const colors = [
   'rgb(255, 99, 132)',
   'rgb(255, 206, 86)',
   'rgb(75, 192, 192)',
-  'rgb(153, 102, 255)'
+  'rgb(153, 102, 255)',
 ]
 
 export default {
@@ -48,16 +41,12 @@ export default {
   props: {
     series: Array,
     labels: Array,
-    title: String
+    title: String,
   },
 
   computed: {
     hasData() {
-      return (
-        this.labels?.length &&
-        this.series?.length &&
-        this.series.some(s => s.data?.length)
-      )
+      return this.labels?.length && this.series?.length && this.series.some((s) => s.data?.length)
     },
 
     chartData() {
@@ -69,13 +58,11 @@ export default {
           return {
             label: item.label ?? `Dataset ${index + 1}`,
             data: item.data,
-            backgroundColor: color
-              .replace('rgb', 'rgba')
-              .replace(')', ', 0.7)'),
+            backgroundColor: color.replace('rgb', 'rgba').replace(')', ', 0.7)'),
             borderColor: color,
-            borderWidth: 1
+            borderWidth: 1,
           }
-        })
+        }),
       }
     },
 
@@ -87,23 +74,23 @@ export default {
           legend: { position: 'top' },
           title: {
             display: !!this.title,
-            text: this.title
-          }
+            text: this.title,
+          },
         },
         scales: {
           x: {
             grid: { color: 'rgba(176,176,176,0.4)' },
-            ticks: { color: '#B0B0B0' }
+            ticks: { color: '#B0B0B0' },
           },
           y: {
             beginAtZero: true,
             grid: { color: 'rgba(176,176,176,0.4)' },
-            ticks: { color: '#B0B0B0' }
-          }
-        }
+            ticks: { color: '#B0B0B0' },
+          },
+        },
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

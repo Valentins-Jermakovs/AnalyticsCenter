@@ -1,9 +1,11 @@
 <template>
-    <!-- Line chart -->
-  <div class="w-full h-full bg-base-100 p-5 text-base-content">
+  <!-- Line chart -->
+  <div class="w-full min-h-full bg-base-100 p-5 text-base-content">
     <Line v-if="hasData" :data="chartData" :options="options" />
-    <div v-else
-      class="h-full w-full border border-base-300 bg-base-200 rounded-box flex flex-col items-center justify-center gap-5">
+    <div
+      v-else
+      class="h-full w-full border border-base-300 bg-base-200 rounded-box flex flex-col items-center justify-center gap-5"
+    >
       <h2 class="text-2xl opacity-50">Nav datu!</h2>
       <font-awesome-icon icon="fa-solid fa-chart-line" size="2xl" class="opacity-50" />
     </div>
@@ -21,7 +23,7 @@ import {
   LinearScale,
   CategoryScale,
   PointElement,
-  Filler
+  Filler,
 } from 'chart.js'
 
 ChartJS.register(
@@ -32,17 +34,17 @@ ChartJS.register(
   LinearScale,
   CategoryScale,
   PointElement,
-  Filler
+  Filler,
 )
 
 // Colors for lines
 const colors = [
-  'rgb(54, 162, 235)',   // Blue
-  'rgb(255, 159, 64)',    // Orange
-  'rgb(255, 99, 132)',   // Red
-  'rgb(255, 206, 86)',   // Yellow
-  'rgb(75, 192, 192)',   // Green
-  'rgb(153, 102, 255)'   // Purple
+  'rgb(54, 162, 235)', // Blue
+  'rgb(255, 159, 64)', // Orange
+  'rgb(255, 99, 132)', // Red
+  'rgb(255, 206, 86)', // Yellow
+  'rgb(75, 192, 192)', // Green
+  'rgb(153, 102, 255)', // Purple
 ]
 
 export default {
@@ -52,16 +54,16 @@ export default {
   props: {
     series: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     labels: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     title: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
   },
 
   computed: {
@@ -71,7 +73,7 @@ export default {
         this.labels.length > 0 &&
         Array.isArray(this.series) &&
         this.series.length > 0 &&
-        this.series.some(s => Array.isArray(s.data) && s.data.length > 0)
+        this.series.some((s) => Array.isArray(s.data) && s.data.length > 0)
       )
     },
     chartData() {
@@ -84,16 +86,14 @@ export default {
             label: item.label ?? `Dataset ${index + 1}`,
             data: item.data,
             borderColor: color,
-            backgroundColor: color
-              .replace('rgb', 'rgba')
-              .replace(')', ', 0.25)'),
+            backgroundColor: color.replace('rgb', 'rgba').replace(')', ', 0.25)'),
             borderWidth: 2,
             tension: 0.4,
             pointRadius: 4,
             pointHoverRadius: 6,
-            fill: true
+            fill: true,
           }
-        })
+        }),
       }
     },
 
@@ -103,7 +103,7 @@ export default {
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            position: 'top'
+            position: 'top',
           },
           tooltip: {
             mode: 'index',
@@ -112,44 +112,43 @@ export default {
             backgroundColor: 'rgba(0, 0, 0, 1)',
             boxPadding: 10,
             caretSize: 10,
-            cornerRadius: 1
+            cornerRadius: 1,
           },
           title: {
             display: !!this.title,
             text: this.title,
-            font: { size: 16 }
-          }
+            font: { size: 16 },
+          },
         },
         scales: {
           x: {
             ticks: {
-              color: '#B0B0B0'
+              color: '#B0B0B0',
             },
             grid: {
-              color: 'rgba(176, 176, 176, 0.5)'
-            }
+              color: 'rgba(176, 176, 176, 0.5)',
+            },
           },
           y: {
             beginAtZero: true,
             ticks: {
-              color: '#B0B0B0'
+              color: '#B0B0B0',
             },
             grid: {
-              color: 'rgba(176, 176, 176, 0.5)'
-            }
-          }
+              color: 'rgba(176, 176, 176, 0.5)',
+            },
+          },
         },
         animations: {
           numbers: {
             duration: 1000,
-            easing: 'linear'
-          }
-        }
+            easing: 'linear',
+          },
+        },
       }
-    }
-  }
+    },
+  },
 }
 </script>
-
 
 <style scoped></style>

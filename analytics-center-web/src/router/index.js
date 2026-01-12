@@ -84,8 +84,8 @@ const router = createRouter({
               path: 'visualization',
               name: 'visualization',
               component: () => import('@/components/pages/dataAnalyzer/visualisationPage.vue'),
-            }
-          ]
+            },
+          ],
         },
         {
           path: 'dataCompare',

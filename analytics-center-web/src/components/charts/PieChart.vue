@@ -13,13 +13,7 @@
 
 <script>
 import { Pie } from 'vue-chartjs'
-import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
-  ArcElement
-} from 'chart.js'
+import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement } from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement)
 
@@ -30,7 +24,7 @@ const colors = [
   'rgb(255, 206, 86)',
   'rgb(75, 192, 192)',
   'rgb(153, 102, 255)',
-  'rgb(201, 203, 207)'
+  'rgb(201, 203, 207)',
 ]
 
 export default {
@@ -40,16 +34,16 @@ export default {
   props: {
     labels: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     data: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     title: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
   },
 
   computed: {
@@ -65,9 +59,9 @@ export default {
             label: this.title || 'Dataset',
             data: this.data,
             backgroundColor: this.labels.map((_, i) => colors[i % colors.length]),
-            borderWidth: 1
-          }
-        ]
+            borderWidth: 1,
+          },
+        ],
       }
     },
 
@@ -76,16 +70,22 @@ export default {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: { position: 'right' },
+          legend: { position: 'bottom' },
           title: {
             display: !!this.title,
             text: this.title,
-            font: { size: 16 }
-          }
-        }
+            font: { size: 16 },
+          },
+        },
+        animations: {
+          numbers: {
+            duration: 1000,
+            easing: 'linear',
+          },
+        },
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
