@@ -1,98 +1,72 @@
 <template>
     <div class="md:p-5 flex items-center justify-center h-full">
 
-        <div class="bg-base-200 w-full lg:w-4/5 h-full flex flex-col gap-5 overflow-auto">
+        <div class="bg-base-200 w-full lg:w-4/5 h-full flex flex-col gap-5 overflow-auto pb-5">
             <!-- title -->
             <div class="flex items-center justify-center p-5 bg-base-300">
-                <h1 class="text-3xl"> Virsraksts </h1>
-
+                <h1 class="text-3xl">{{ chartStore.userChart.title }}</h1>
             </div>
-            <!-- Графики -->
-            <div v-if="charts.length" class="w-full h-96 px-5">
-                <LineChart v-for="(chart, index) in charts" :key="index" :title="chart.title" :labels="chart.labels"
-                    :series="chart.series" class="border border-base-300" />
-            </div>
+            <!-- Charts -->
 
-            <!-- Если графиков нет -->
-            <div v-else class="flex px-5 w-full items-center justify-center">
-                <div
-                    class="w-full flex flex-col items-center justify-center h-96 px-3 border border-base-300 rounded-box bg-base-100">
-                    <h2 class="text-2xl opacity-50 mb-2">Nav datu!</h2>
-                    <font-awesome-icon icon="fa-solid fa-chart-line" size="2xl" class="opacity-50" />
-                    <p class="opacity-50 mt-2">Izveidojiet grafiku, izmantojot sadaļu Datu Analizators!</p>
+            <div class="w-full min-h-150 px-5">
+                <!-- Line chart -->
+                <LineChart v-if="chartStore.userChart.type === 'line'" class="border border-base-300" :labels="labels"
+                    :series="series" :title="chartStore.userChart.chartTitle" />
+                <!-- Bar chart (vertical) -->
+                <BarChart v-else-if="chartStore.userChart.type === 'bar'" class="border border-base-300"
+                    :labels="labels" :series="series" :title="chartStore.userChart.chartTitle" />
+                <!-- Bar chart (horizontal) -->
+                <HorizontalBarChart v-else-if="chartStore.userChart.type === 'barh'" class="border border-base-300"
+                    :labels="labels" :series="series" :title="chartStore.userChart.chartTitle" />
+                <!-- Doughnut chart -->
+                <DoughnutChart v-else-if="chartStore.userChart.type === 'doughnut'" class="border border-base-300"
+                    :labels="labels" :series="series" :title="chartStore.userChart.chartTitle" />
+                <!-- Pie chart -->
+                <PieChart v-else-if="chartStore.userChart.type === 'pie'" class="border border-base-300"
+                    :labels="labels" :series="series" :title="chartStore.userChart.chartTitle" />
+                <!-- Radar chart -->
+                <RadarChart v-else-if="chartStore.userChart.type === 'radar'" class="border border-base-300"
+                    :labels="labels" :series="series" :title="chartStore.userChart.chartTitle" />
+                <!-- If chart not exist -->
+                <div v-else class="flex w-full items-center justify-center">
+                    <div
+                        class="w-full flex flex-col items-center justify-center h-96 px-3 border border-base-300 rounded-box bg-base-100">
+                        <h2 class="text-2xl opacity-50 mb-2">Nav datu!</h2>
+                        <font-awesome-icon icon="fa-solid fa-chart-line" size="2xl" class="opacity-50" />
+                        <p class="opacity-50 mt-2">Izveidojiet grafiku, izmantojot sadaļu Datu Analizators!</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Анализ показателей по каждому dataset -->
-            <div v-if="charts.length" class="flex flex-col gap-6 px-5">
-                <template v-for="(chart, chartIndex) in charts" :key="chartIndex">
-                    <!-- Заголовок графика -->
-
-                    <!-- Для каждого dataset отдельная строка -->
-                    <template v-for="(dataset, dsIndex) in chart.series" :key="dsIndex">
-                        <div class="w-full flex items-center justify-center p-3 bg-base-100 border border-base-300">
-                            <h3 class="text-lg font-semibold">{{ dataset.label }}</h3>
-                        </div>
-                        <div class="flex gap-4 mb-2">
-                            <!-- Min -->
-                            <div class="flex-1 border border-base-300 bg-base-100 p-4 rounded-box flex flex-col items-center justify-center">
-                                <p class="text-sm opacity-50 mb-1">Min</p>
-                                <p class="text-2xl font-bold">{{ getMin(dataset.data) }}</p>
-                            </div>
-                            <!-- Avg -->
-                            <div class="flex-1 border border-base-300 bg-base-100 p-4 rounded-box flex flex-col items-center justify-center">
-                                <p class="text-sm opacity-50 mb-1">Avg</p>
-                                <p class="text-2xl font-bold">{{ getAvg(dataset.data) }}</p>
-                            </div>
-                            <!-- Max -->
-                            <div class="flex-1 border border-base-300 bg-base-100 p-4 rounded-box flex flex-col items-center justify-center">
-                                <p class="text-sm opacity-50 mb-1">Max</p>
-                                <p class="text-2xl font-bold">{{ getMax(dataset.data) }}</p>
-                            </div>
-                        </div>
-                    </template>
-                </template>
+            <!-- Description -->
+            <div class="flex items-center justify-center px-5 w-full">
+                <pre class="text-lg wrap-break-words whitespace-pre-wrap">
+                    {{ chartStore.userChart.description }}
+                </pre>
             </div>
 
-            <!-- description block -->
-            <div class="px-5">
-                <p class="">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat molestiae iure culpa ad quas
-                    natus quibusdam,
-                    ut, ab quia, velit officiis magnam repudiandae nemo aspernatur. Nesciunt mollitia aliquid officia
-                    ipsam?
-                    Itaque, inventore sed dicta ipsa veniam natus voluptates pariatur quos! Quis sunt quibusdam quaerat
-                    consequuntur
-                    eaque dolorum quod adipisci odio eligendi. Architecto voluptatem iusto, magni beatae amet dolorem
-                    tempora
-                    necessitatibus?
-                    Nihil assumenda sed quia nisi! Placeat amet laudantium dignissimos totam facilis, nam veritatis odio
-                    esse nobis
-                    eos aspernatur iusto ipsa distinctio minus tempore consectetur libero soluta nulla qui impedit
-                    mollitia.
-                    Laudantium, ipsum eaque libero voluptatibus minima unde asperiores sequi quis commodi rerum
-                    quisquam, officiis
-                    est ipsa natus voluptate saepe suscipit distinctio! Nisi ducimus animi rerum ab culpa consequatur
-                    repellat aut!
-                    Ad totam natus at nostrum odio vero consequuntur harum quibusdam ratione. Illo fugit vero cumque
-                    eveniet
-                    inventore expedita totam deleniti dignissimos ipsa a dicta autem, accusantium molestiae. Sint, culpa
-                    delectus.
-                    Quasi consectetur pariatur autem quibusdam, quos aperiam harum iure assumenda nam laudantium ipsam
-                    quidem vitae
-                    molestias voluptatem. Ad voluptas cumque aspernatur quo molestias, quibusdam explicabo, debitis
-                    placeat saepe
-                    voluptate rem!
-                </p>
+            <div class="flex flex-wrap w-full gap-2">
+                <div v-for="stat in chartStore.seriesStats" :key="stat.label" class="flex flex-col w-full px-5 gap-2">
+                    <div class="flex bg-base-100 border border-base-300 p-3 items-center justify-center rounded-box">
+                        <h3 class="col-span-full text-xl font-semibold">{{ stat.label }}</h3>
+                    </div>
+                    <div class="flex gap-2 flex-wrap">
+                        <StatCard label="Сумма" :value="stat.sum" />
+                        <StatCard label="Среднее" :value="stat.avg" />
+                        <StatCard label="Макс" :value="stat.max" />
+                        <StatCard label="Мин" :value="stat.min" />
+                        <StatCard label="Рост (последний)" :value="stat.diff[stat.diff.length - 1].toFixed(2)" />
+                    </div>
+                </div>
             </div>
 
             <!-- Верхняя панель с кнопками -->
             <div class="flex p-5">
-                <div class="w-full flex justify-between items-center">
-                    <button @click="goBack" class="btn btn-secondary">
+                <div class="w-full flex justify-center items-center gap-5">
+                    <button @click="goBack" class="btn btn-lg btn-secondary">
                         ← Atpakaļ
                     </button>
-                    <button class="btn btn-primary">
+                    <button class="btn btn-lg btn-primary">
                         Saglabāt
                     </button>
                 </div>
@@ -103,36 +77,35 @@
 </template>
 
 <script setup>
-import { computed, onUnmounted } from 'vue'
+import { computed, onUnmounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { useChartsStore } from '@/stores/chartsData'
+import { useChartStore } from '@/stores/chartData'
+const chartStore = useChartStore()
+
+// Charts imports
 import LineChart from '@/components/charts/LineChart.vue'
+import BarChart from '@/components/charts/BarChart.vue'
+import HorizontalBarChart from '@/components/charts/HorizontalBarChart.vue'
+import DoughnutChart from '@/components/charts/DoughnutChart.vue'
+import PieChart from '@/components/charts/PieChart.vue'
+import RadarChart from '@/components/charts/RadarChart.vue'
+
+import StatCard from '@/components/analyzer/StatCard.vue'
 
 // router для перехода назад
 const router = useRouter()
 const goBack = () => router.back()
 
 // store
-const chartsStore = useChartsStore()
-const charts = computed(() => chartsStore.charts)
+const labels = computed(() => chartStore.normalizeChartData.labels)
+const series = computed(() => chartStore.normalizeChartData.series)
 
-// очищаем store при размонтировании страницы
+
+// clear store after unmount
 onUnmounted(() => {
-    chartsStore.clearCharts()
+    chartStore.clearChart()
 })
 
-const getMin = (arr) => (arr && arr.length ? Math.min(...arr) : '-')
-const getMax = (arr) => (arr && arr.length ? Math.max(...arr) : '-')
-const getAvg = (arr) => {
-    if (!arr || !arr.length) return '-'
-    const sum = arr.reduce((a, b) => a + b, 0)
-    return (sum / arr.length).toFixed(2)
-}
 </script>
 
-<style scoped>
-/* можно добавить небольшой отступ между графиками */
-.LineChart+.LineChart {
-    margin-top: 2rem;
-}
-</style>
+<style scoped></style>

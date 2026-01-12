@@ -2,7 +2,6 @@
     <Header :title="title" :imageUrl="image"></Header>
     <NavigationPanel v-model="activePage" :buttons="navButtons" />
     <ManualPage v-if="activePage === 'manual'"></ManualPage>
-    <UploadPage v-if="activePage === 'upload'"></UploadPage>
 </template>
 
 <script setup>
@@ -19,7 +18,6 @@ import { ref, computed } from 'vue'
 const activePage = ref('manual')
 const navButtons = computed(() => [
   { title: 'Manuāla datu ievade', key: 'manual' },
-  { title: 'Datu augsupielāde', key: 'upload' },
 ])
 </script>
 
