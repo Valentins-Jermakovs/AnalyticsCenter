@@ -57,9 +57,9 @@
           :title="chartStore.userChart.chartTitle"
         />
         <!-- If chart not exist -->
-        <div v-else class="flex w-full items-center justify-center">
+        <div v-else class="flex w-full h-full items-center justify-center">
           <div
-            class="w-full flex flex-col items-center justify-center h-96 px-3 border border-base-300 rounded-box bg-base-100"
+            class="w-full h-full flex flex-col items-center justify-center px-3 border border-base-300 rounded-box bg-base-100"
           >
             <h2 class="text-2xl opacity-50 mb-2">Nav datu!</h2>
             <font-awesome-icon icon="fa-solid fa-chart-line" size="2xl" class="opacity-50" />
@@ -70,7 +70,9 @@
 
       <!-- Description -->
       <div class="flex items-center px-5 w-full">
-        <pre class="text-lg wrap-break-words whitespace-pre-wrap">{{chartStore.userChart.description}}</pre>
+        <pre class="text-lg wrap-break-words whitespace-pre-wrap">{{
+          chartStore.userChart.description
+        }}</pre>
       </div>
 
       <div class="flex flex-wrap w-full gap-2">
