@@ -1,7 +1,7 @@
 <template>
   <!-- OUTER SCROLL CONTAINER -->
   <div
-    class="w-full h-16 bg-base-200 border-y border-base-300 overflow-x-auto overflow-y-hidden relative z-10"
+    class="w-full h-16 bg-base-200 border-y border-base-300 overflow-x-auto overflow-y-hidden relative"
     style="-webkit-overflow-scrolling: touch"
   >
     <!-- INNER FLEX ROW -->
