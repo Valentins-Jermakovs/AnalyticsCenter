@@ -240,7 +240,8 @@
     "min": "Minimums",
     "max": "Maksimums",
     "growth": "Pieaugums",
-    "no_data": "Nav datu"
+    "no_data": "Nav datu",
+    "support": "Atbalsts"
   },
   "columns": {
     "date": "Datums",
@@ -257,5 +258,9 @@
   "logout": {
     "title": "Sesija pārtraukta",
     "confirm": "Uz sākumu"
+  },
+  "errors": {
+    "404": "Lapa netika atrasta",
+    "500": "Servera kļūda"
   }
 }

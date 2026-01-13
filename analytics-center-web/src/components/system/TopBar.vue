@@ -53,6 +53,25 @@
       </button>
     </BaseDialog>
 
+    <!-- Support Modal -->
+    <BaseDialog
+      v-model="supportModal"
+      :title="$t('common.support')"
+      :cancel-text="$t('system.topbar.modals.language.cancel')"
+    >
+      <!-- 3 books -->
+      <!-- License, User manual, Policy -->
+      <div class="flex flex-col gap-2">
+        <div v-for="(doc, index) in documents" :key="index" class="flex-1 flex flex-col bg-base-200 border border-base-300 p-5
+      hover:scale-105 transform transition-transform duration-500">
+        <a :href="doc.link" target="_blank" class=" hover:underline">
+          <font-awesome-icon icon="fa-regular fa-circle-question" />
+          {{ doc.title }}
+        </a>
+      </div>
+      </div>
+    </BaseDialog>
+
     <!-- Logout Modal -->
     <BaseDialog
       v-model="logoutModal"
@@ -67,6 +86,23 @@
 </template>
 
 <script setup>
+
+// pdf documents - to be opened in new tab
+const userManual = {
+  link: '/docs/user_manual.pdf',
+  title: 'User Manual',
+}
+const license = {
+  link: '/docs/license.pdf',
+  title: 'License',
+}
+const policy = {
+  link: '/docs/policy.pdf',
+  title: 'Privacy Policy',
+}
+
+const documents = [userManual, license, policy]
+
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
@@ -81,11 +117,12 @@ const router = useRouter()
 const navigation = [
   { titleKey: 'system.topbar.search', icon: 'fa-solid fa-magnifying-glass', modal: 'search' },
   { titleKey: 'system.topbar.language', icon: 'fa-solid fa-globe', modal: 'language' },
-  { titleKey: 'system.topbar.support', icon: 'fa-solid fa-question-circle' },
+  { titleKey: 'system.topbar.support', icon: 'fa-solid fa-question-circle', modal: 'support' },
   { titleKey: 'system.topbar.logout', icon: 'fa-solid fa-circle-xmark', modal: 'logout' },
 ]
 
 // modals
+const supportModal = ref(false)
 const searchModal = ref(false)
 const languageModal = ref(false)
 const logoutModal = ref(false)
@@ -95,6 +132,7 @@ const openModal = (modalName) => {
   if (modalName === 'search') searchModal.value = true
   else if (modalName === 'language') languageModal.value = true
   else if (modalName === 'logout') logoutModal.value = true
+  else if (modalName === 'support') supportModal.value = true
 }
 
 const handleLogout = () => {

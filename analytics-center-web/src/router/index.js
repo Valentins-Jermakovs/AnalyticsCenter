@@ -6,9 +6,17 @@ import RegisterView from '@/views/auth/RegisterView.vue' // register
 import SystemLayout from '@/components/layout/SystemLayout.vue' // system layout
 import LogoutView from '@/views/logout/LogoutView.vue' // logout
 
+import NotFound from '@/views/errors/NotFound.vue' // 404 error
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    // 404 error page
+    {
+      path: '/:catchAll(.*)',
+      name: 'not-found',
+      component: NotFound,
+    },
     {
       path: '/',
       name: 'landing',

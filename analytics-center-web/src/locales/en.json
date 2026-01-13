@@ -240,7 +240,8 @@
     "min": "Min",
     "max": "Max",
     "growth": "Growth",
-    "no_data": "No data"
+    "no_data": "No data",
+    "support": "Support"
   },
   "columns": {
     "date": "Date",
@@ -257,5 +258,9 @@
   "logout": {
     "title": "Session ended",
     "confirm": "Home"
+  },
+  "errors": {
+    "404": "Page not found",
+    "500": "Internal server error"
   }
 }
