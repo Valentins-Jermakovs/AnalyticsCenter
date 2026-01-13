@@ -2,7 +2,6 @@
   <Header :title="title" :imageUrl="image"></Header>
 
   <div class="flex flex-col gap-5 p-5">
-
     <!-- Event window -->
     <EventWindow
       :events="events"
@@ -32,11 +31,7 @@
     />
 
     <!-- Read event modal -->
-    <ReadEventModal
-      v-model:open="readModal"
-      :event="currentEvent"
-      @close="readEventModal"
-    />
+    <ReadEventModal v-model:open="readModal" :event="currentEvent" @close="readEventModal" />
 
     <!-- Delete event modal -->
     <DeleteEventModal
@@ -61,7 +56,6 @@ import EventModal from '@/components/notifications/EventModal.vue'
 import EventList from '@/components/notifications/EventList.vue'
 import ReadEventModal from '@/components/notifications/ReadEventModal.vue'
 import DeleteEventModal from '@/components/notifications/DeleteEventModal.vue'
-
 
 const title = computed(() => t('system.notifications.title'))
 import notificationImage from '@/assets/images/igor-omilaev-GCakG_Kr0UM-unsplash.jpg'

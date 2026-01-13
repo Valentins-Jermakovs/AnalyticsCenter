@@ -14,8 +14,8 @@
 // Translations
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
-defineProps({open:Boolean})
-defineEmits(['delete','close'])
+defineProps({ open: Boolean })
+defineEmits(['delete', 'close'])
 </script>
 
 <style scoped></style>

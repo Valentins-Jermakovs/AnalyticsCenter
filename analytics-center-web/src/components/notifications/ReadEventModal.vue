@@ -18,7 +18,7 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 defineProps({
   open: Boolean,
-  event: Object
+  event: Object,
 })
 defineEmits(['close'])
 </script>

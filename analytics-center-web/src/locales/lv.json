@@ -304,6 +304,7 @@
   },
   "errors": {
     "404": "Lapa netika atrasta",
-    "500": "Servera kļūda"
+    "500": "Servera kļūda",
+    "empty_field": "Aizpildiet lauku!"
   }
 }

@@ -304,6 +304,7 @@
   },
   "errors": {
     "404": "Page not found",
-    "500": "Internal server error"
+    "500": "Internal server error",
+    "empty_field": "Please fill in all required field!"
   }
 }

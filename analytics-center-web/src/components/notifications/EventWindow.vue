@@ -1,6 +1,7 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 bg-base-100 rounded-box border border-base-300 p-5">
-
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 gap-5 bg-base-100 rounded-box border border-base-300 p-5"
+  >
     <!-- Event details -->
     <EventDetails :event="currentEvent" />
 
@@ -17,8 +18,8 @@
 </template>
 
 <script setup>
-import EventDetails from './EventDetails.vue';
-import EventControls from './EventControls.vue';
+import EventDetails from './EventDetails.vue'
+import EventControls from './EventControls.vue'
 
 // Translations
 import { useI18n } from 'vue-i18n'
@@ -27,7 +28,7 @@ const { t } = useI18n()
 defineProps({
   events: Array,
   currentEvent: Object,
-  formattedTime: String
+  formattedTime: String,
 })
 defineEmits(['launch-timer', 'pause-timer', 'delete-event', 'new-event'])
 </script>

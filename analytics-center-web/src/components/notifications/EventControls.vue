@@ -4,13 +4,25 @@
       <h1 class="text-4xl">{{ formattedTime }}</h1>
     </div>
     <div class="flex flex-col sm:flex-row justify-around gap-3">
-      <button class="btn btn-secondary flex-1 p-3 text-2xl" @click="$emit('pause-timer')" :disabled="!events.length">
+      <button
+        class="btn btn-secondary flex-1 p-3 text-2xl"
+        @click="$emit('pause-timer')"
+        :disabled="!events.length"
+      >
         <font-awesome-icon icon="fa-solid fa-pause" />
       </button>
-      <button class="btn btn-primary flex-1 p-3 text-2xl" @click="$emit('launch-timer')" :disabled="!events.length">
+      <button
+        class="btn btn-primary flex-1 p-3 text-2xl"
+        @click="$emit('launch-timer')"
+        :disabled="!events.length"
+      >
         <font-awesome-icon icon="fa-solid fa-play" />
       </button>
-      <button class="btn btn-error flex-1 p-3 text-2xl" @click="$emit('delete-event')" :disabled="!events.length">
+      <button
+        class="btn btn-error flex-1 p-3 text-2xl"
+        @click="$emit('delete-event')"
+        :disabled="!events.length"
+      >
         <font-awesome-icon icon="fa-solid fa-trash" />
       </button>
     </div>
@@ -29,7 +41,7 @@ const { t } = useI18n()
 
 defineProps({
   events: Array,
-  formattedTime: String
+  formattedTime: String,
 })
 defineEmits(['launch-timer', 'pause-timer', 'delete-event', 'new-event'])
 </script>
