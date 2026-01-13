@@ -98,7 +98,6 @@
         </div>
       </div>
 
-      <!-- Верхняя панель с кнопками -->
       <div class="flex p-5">
         <div class="w-full flex justify-center items-center gap-5">
           <button @click="goBack" class="btn btn-lg btn-secondary">{{ $t('common.back') }}</button>

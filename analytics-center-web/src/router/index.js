@@ -67,14 +67,6 @@ const router = createRouter({
           },
         },
         {
-          path: 'settings',
-          name: 'settings',
-          component: () => import('@/views/system/SettingsView.vue'),
-          meta: {
-            title: 'Settings',
-          },
-        },
-        {
           path: 'dataAnalyzer',
           name: 'dataAnalyzer',
           component: () => import('@/views/system/DataAnalyzerView.vue'),
@@ -109,6 +101,22 @@ const router = createRouter({
           component: () => import('@/views/system/CalendarView.vue'),
           meta: {
             title: 'Calendar',
+          },
+        },
+        {
+          path: 'notifications',
+          name: 'notifications',
+          component: () => import('@/views/system/NotificationsView.vue'),
+          meta: {
+            title: 'Notifications',
+          },
+        },
+        {
+          path: 'pomodoro',
+          name: 'pomodoro',
+          component: () => import('@/views/system/PomodoroView.vue'),
+          meta: {
+            title: 'Pomodoro',
           },
         },
         {

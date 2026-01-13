@@ -62,13 +62,16 @@
       <!-- 3 books -->
       <!-- License, User manual, Policy -->
       <div class="flex flex-col gap-2">
-        <div v-for="(doc, index) in documents" :key="index" class="flex-1 flex flex-col bg-base-200 border border-base-300 p-5
-      hover:scale-105 transform transition-transform duration-500">
-        <a :href="doc.link" target="_blank" class=" hover:underline">
-          <font-awesome-icon icon="fa-regular fa-circle-question" />
-          {{ doc.title }}
-        </a>
-      </div>
+        <div
+          v-for="(doc, index) in documents"
+          :key="index"
+          class="flex-1 flex flex-col bg-base-200 border border-base-300 p-5 hover:scale-105 transform transition-transform duration-500"
+        >
+          <a :href="doc.link" target="_blank" class="hover:underline">
+            <font-awesome-icon icon="fa-regular fa-circle-question" />
+            {{ doc.title }}
+          </a>
+        </div>
       </div>
     </BaseDialog>
 
@@ -86,7 +89,6 @@
 </template>
 
 <script setup>
-
 // pdf documents - to be opened in new tab
 const userManual = {
   link: '/docs/user_manual.pdf',

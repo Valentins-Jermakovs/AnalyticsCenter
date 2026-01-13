@@ -76,7 +76,9 @@
       "analytics": "Analytics",
       "archive": "Archive",
       "data_analyzer": "Data Analyzer",
-      "data_compare": "Data Compare"
+      "data_compare": "Data Compare",
+      "notifications": "Notifications",
+      "pomodoro": "Pomodoro"
     },
     "dashboard": {
       "home": {

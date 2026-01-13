@@ -45,6 +45,16 @@ const menu = [
     routeName: 'calendar',
   },
   {
+    titleKey: 'system.sidebar.notifications',
+    icon: 'fa-solid fa-bell',
+    routeName: 'notifications',
+  },
+  {
+    titleKey: 'system.sidebar.pomodoro',
+    icon: 'fa-solid fa-clock',
+    routeName: 'pomodoro',
+  },
+  {
     titleKey: 'system.sidebar.notes',
     icon: 'fa-solid fa-sticky-note',
     routeName: 'notes',

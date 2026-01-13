@@ -76,7 +76,9 @@
       "analytics": "Панель аналитики",
       "archive": "Архив",
       "data_analyzer": "Анализатор данных",
-      "data_compare": "Сравнение данных"
+      "data_compare": "Сравнение данных",
+      "notifications": "Уведомления",
+      "pomodoro": "Помодоро"
     },
     "dashboard": {
       "home": {

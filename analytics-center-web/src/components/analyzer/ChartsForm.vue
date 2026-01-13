@@ -4,7 +4,9 @@
     <div class="w-full lg:w-2/3">
       <!-- Header -->
       <div class="bg-base-300 w-full text-center p-4 rounded-t-box">
-        <h2 class="text-xl sm:text-2xl md:text-3xl">{{ t('system.data_analyzer.form.form_title') }}</h2>
+        <h2 class="text-xl sm:text-2xl md:text-3xl">
+          {{ t('system.data_analyzer.form.form_title') }}
+        </h2>
       </div>
 
       <!-- Form -->
@@ -28,7 +30,7 @@
         <!-- Diagrammas tips -->
         <div class="form-control">
           <label class="label">
-            <span class="label-text">{{ t('system.data_analyzer.form.type')  }}</span>
+            <span class="label-text">{{ t('system.data_analyzer.form.type') }}</span>
           </label>
           <select class="select select-bordered w-full" v-model="userChart.type">
             <option value="line">{{ t('system.data_analyzer.charts.linear') }}</option>
@@ -109,7 +111,9 @@
           <!-- Series label -->
           <div class="form-control">
             <label class="label">
-              <span class="label-text">{{ index }} {{ t('system.data_analyzer.form.y_axis_label') }}</span>
+              <span class="label-text"
+                >{{ index }} {{ t('system.data_analyzer.form.y_axis_label') }}</span
+              >
             </label>
             <input
               type="text"
@@ -122,7 +126,9 @@
           <!-- Series data -->
           <div class="form-control">
             <label class="label">
-              <span class="label-text">{{ index }} {{ t('system.data_analyzer.form.y_axis_data') }}</span>
+              <span class="label-text"
+                >{{ index }} {{ t('system.data_analyzer.form.y_axis_data') }}</span
+              >
             </label>
             <input
               type="text"
@@ -241,16 +247,16 @@ const checkXAxisLengthMatchesY = () => {
   // X values
   const xValues = userChart.xAxis
     .split(',')
-    .map(v => v.trim())
-    .filter(v => v !== '')
+    .map((v) => v.trim())
+    .filter((v) => v !== '')
 
   const xLength = xValues.length
 
   for (let i = 0; i < userChart.seriesData.length; i++) {
     const yValues = userChart.seriesData[i]
       .split(',')
-      .map(v => v.trim())
-      .filter(v => v !== '')
+      .map((v) => v.trim())
+      .filter((v) => v !== '')
 
     if (yValues.length !== xLength) {
       errorMessage.value = t('system.data_analyzer.errors.invalid_x_y_length')

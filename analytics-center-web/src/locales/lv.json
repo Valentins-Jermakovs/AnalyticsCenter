@@ -72,11 +72,13 @@
       "news": "Ziņas",
       "library": "Bibliotēka",
       "calendar": "Kalendārs",
-      "notes": "Notikumi",
+      "notes": "Piezīmes",
       "analytics": "Analītikas panelis",
       "archive": "Arhīvs",
       "data_analyzer": "Datu analizators",
-      "data_compare": "Datu salīdzināšana"
+      "data_compare": "Datu salīdzināšana",
+      "notifications": "Atgādinājumi",
+      "pomodoro": "Pomodoro"
     },
     "dashboard": {
       "home": {

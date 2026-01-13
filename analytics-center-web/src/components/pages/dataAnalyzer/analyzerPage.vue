@@ -11,7 +11,7 @@ import NavigationPanel from '@/components/ui/NavigationPanel.vue'
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
-const title = computed (() => t('system.data_analyzer.title'))
+const title = computed(() => t('system.data_analyzer.title'))
 import newsImage from '@/assets/images/shubham-dhage-MNCVkZxae6A-unsplash.jpg'
 import ManualPage from './manualPage.vue'
 const image = newsImage
