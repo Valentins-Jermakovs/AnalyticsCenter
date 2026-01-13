@@ -61,9 +61,8 @@
           <div
             class="w-full h-full flex flex-col items-center justify-center px-3 border border-base-300 rounded-box bg-base-100"
           >
-            <h2 class="text-2xl opacity-50 mb-2">Nav datu!</h2>
+            <h2 class="text-2xl opacity-50 mb-2">{{ $t('common.no_data') }}</h2>
             <font-awesome-icon icon="fa-solid fa-chart-line" size="2xl" class="opacity-50" />
-            <p class="opacity-50 mt-2">Izveidojiet grafiku, izmantojot sadaļu Datu Analizators!</p>
           </div>
         </div>
       </div>
@@ -87,12 +86,12 @@
             <h3 class="col-span-full text-xl font-semibold">{{ stat.label }}</h3>
           </div>
           <div class="flex gap-2 flex-wrap">
-            <StatCard label="Сумма" :value="stat.sum" />
-            <StatCard label="Среднее" :value="stat.avg" />
-            <StatCard label="Макс" :value="stat.max" />
-            <StatCard label="Мин" :value="stat.min" />
+            <StatCard :label="t('common.sum')" :value="stat.sum" />
+            <StatCard :label="t('common.average')" :value="stat.avg" />
+            <StatCard :label="t('common.max')" :value="stat.max" />
+            <StatCard :label="t('common.min')" :value="stat.min" />
             <StatCard
-              label="Рост (последний)"
+              :label="t('common.growth')"
               :value="stat.diff[stat.diff.length - 1].toFixed(2)"
             />
           </div>
@@ -102,8 +101,8 @@
       <!-- Верхняя панель с кнопками -->
       <div class="flex p-5">
         <div class="w-full flex justify-center items-center gap-5">
-          <button @click="goBack" class="btn btn-lg btn-secondary">← Atpakaļ</button>
-          <button class="btn btn-lg btn-primary">Saglabāt</button>
+          <button @click="goBack" class="btn btn-lg btn-secondary">{{ $t('common.back') }}</button>
+          <button class="btn btn-lg btn-primary">{{ $t('common.save') }}</button>
         </div>
       </div>
     </div>
@@ -114,6 +113,8 @@
 import { computed, onUnmounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useChartStore } from '@/stores/chartData'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 const chartStore = useChartStore()
 
 // Charts imports

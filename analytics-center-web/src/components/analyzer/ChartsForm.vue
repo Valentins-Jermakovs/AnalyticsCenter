@@ -4,7 +4,7 @@
     <div class="w-full lg:w-2/3">
       <!-- Header -->
       <div class="bg-base-300 w-full text-center p-4 rounded-t-box">
-        <h2 class="text-xl sm:text-2xl md:text-3xl">Manuāla datu vizualizācijas forma</h2>
+        <h2 class="text-xl sm:text-2xl md:text-3xl">{{ t('system.data_analyzer.form.form_title') }}</h2>
       </div>
 
       <!-- Form -->
@@ -15,11 +15,11 @@
         <!-- Virsraksts -->
         <div class="form-control">
           <label class="label">
-            <span class="label-text">Virsraksts</span>
+            <span class="label-text">{{ t('system.data_analyzer.form.title') }}</span>
           </label>
           <input
             type="text"
-            placeholder="Ievadi virsrakstu"
+            :placeholder="t('system.data_analyzer.form.placeholder.title')"
             class="input input-bordered w-full"
             v-model="userChart.title"
           />
@@ -28,26 +28,26 @@
         <!-- Diagrammas tips -->
         <div class="form-control">
           <label class="label">
-            <span class="label-text">Diagrammas tips</span>
+            <span class="label-text">{{ t('system.data_analyzer.form.type')  }}</span>
           </label>
           <select class="select select-bordered w-full" v-model="userChart.type">
-            <option value="line">Lineārs</option>
-            <option value="bar">Stabiņu (vertikāls)</option>
-            <option value="barh">Stabiņu (horizontāls)</option>
-            <option value="pie">Pie</option>
-            <option value="doughnut">Doughnut</option>
-            <option value="radar">Radar</option>
+            <option value="line">{{ t('system.data_analyzer.charts.linear') }}</option>
+            <option value="bar">{{ t('system.data_analyzer.charts.bar') }}</option>
+            <option value="barh">{{ t('system.data_analyzer.charts.barh') }}</option>
+            <option value="pie">{{ t('system.data_analyzer.charts.pie') }}</option>
+            <option value="doughnut">{{ t('system.data_analyzer.charts.doughnut') }}</option>
+            <option value="radar">{{ t('system.data_analyzer.charts.radar') }}</option>
           </select>
         </div>
 
         <!-- Apraksts -->
         <div class="form-control md:col-span-2">
           <label class="label">
-            <span class="label-text">Apraksts</span>
+            <span class="label-text">{{ t('system.data_analyzer.form.description') }}</span>
           </label>
           <textarea
             class="textarea textarea-bordered min-h-28 w-full"
-            placeholder="Ievadi aprakstu"
+            :placeholder="t('system.data_analyzer.form.placeholder.description')"
             v-model="userChart.description"
           ></textarea>
         </div>
@@ -55,11 +55,11 @@
         <!-- Diagrammas virsraksts -->
         <div class="form-control">
           <label class="label">
-            <span class="label-text">Diagrammas virsraksts</span>
+            <span class="label-text">{{ t('system.data_analyzer.form.chart_title') }}</span>
           </label>
           <input
             type="text"
-            placeholder="Ievadi diagrammas nosaukumu"
+            :placeholder="t('system.data_analyzer.form.placeholder.chart_title')"
             class="input input-bordered w-full"
             v-model="userChart.chartTitle"
           />
@@ -68,11 +68,11 @@
         <!-- X ass -->
         <div class="form-control">
           <label class="label">
-            <span class="label-text">X ass vērtības</span>
+            <span class="label-text">{{ t('system.data_analyzer.form.x_axis') }}</span>
           </label>
           <input
             type="text"
-            placeholder="Jan, Feb, Mar..."
+            :placeholder="t('system.data_analyzer.form.placeholder.x_axis')"
             class="input input-bordered w-full"
             v-model="userChart.xAxis"
           />
@@ -84,7 +84,7 @@
           v-if="userChart.type !== 'pie' && userChart.type !== 'doughnut'"
         >
           <label class="label">
-            <span class="label-text">Grafiku skaits</span>
+            <span class="label-text">{{ t('system.data_analyzer.form.number_of_charts') }}</span>
           </label>
           <input
             type="number"
@@ -97,7 +97,7 @@
 
         <!-- Y ass -->
         <div class="md:col-span-2 mt-4">
-          <h3 class="text-lg font-semibold">Y ass vērtības</h3>
+          <h3 class="text-lg font-semibold">{{ t('system.data_analyzer.form.y_axis') }}</h3>
         </div>
 
         <!-- Datu sērijas -->
@@ -109,11 +109,11 @@
           <!-- Series label -->
           <div class="form-control">
             <label class="label">
-              <span class="label-text"> Grafika {{ index }} nosaukums </span>
+              <span class="label-text">{{ index }} {{ t('system.data_analyzer.form.y_axis_label') }}</span>
             </label>
             <input
               type="text"
-              placeholder="Piem., 2025"
+              :placeholder="t('system.data_analyzer.form.placeholder.y_axis_label')"
               class="input input-bordered w-full"
               v-model="userChart.seriesLabels[index - 1]"
             />
@@ -122,7 +122,7 @@
           <!-- Series data -->
           <div class="form-control">
             <label class="label">
-              <span class="label-text"> Grafika {{ index }} dati </span>
+              <span class="label-text">{{ index }} {{ t('system.data_analyzer.form.y_axis_data') }}</span>
             </label>
             <input
               type="text"
@@ -136,7 +136,7 @@
         <!-- Submit -->
         <div class="md:col-span-2">
           <button class="btn btn-primary w-full sm:w-auto sm:px-10" @click="submitChartForm">
-            Izveidot datu vizualizāciju
+            {{ t('common.create') }}
           </button>
         </div>
       </form>
@@ -145,8 +145,8 @@
     <!-- Error Modal -->
     <BaseDialog
       v-model="errorModal"
-      title="Kļūdas paziņojums"
-      confirm-text="Sapratu"
+      :title="t('common.error')"
+      :confirm-text="t('common.confirm')"
       @confirm="clearError"
     >
       {{ errorMessage }}
@@ -159,6 +159,9 @@ import { ref, reactive, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import BaseDialog from '../ui/BaseDialog.vue'
 import { useChartStore } from '@/stores/chartData'
+
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
 const router = useRouter()
 const chartStore = useChartStore()
@@ -176,7 +179,7 @@ const checkEmptyFields = () => {
   // Check text input and textarea
   if (!userChart.title || !userChart.chartTitle || !userChart.description || !userChart.xAxis) {
     errorModal.value = true
-    errorMessage.value = 'Laukumi ir tukši'
+    errorMessage.value = t('system.data_analyzer.errors.empty_fields')
     return false
   }
   // Check series labels and data
@@ -185,7 +188,7 @@ const checkEmptyFields = () => {
     userChart.seriesData.some((data) => data.trim() === '')
   ) {
     errorModal.value = true
-    errorMessage.value = 'Laukumi ir tukši'
+    errorMessage.value = t('system.data_analyzer.errors.empty_fields')
     return false
   }
 
@@ -198,7 +201,7 @@ const checkXAxis = () => {
   const regex = /^[A-Za-zĀĒĪŪŠŽČāēīūšžčА-Яа-яЁё ,]+$/
 
   if (!regex.test(userChart.xAxis)) {
-    errorMessage.value = 'X ass vērtības drīkst saturēt tikai burtus, atstarpes un komatus'
+    errorMessage.value = t('system.data_analyzer.errors.invalid_x_axis')
     errorModal.value = true
     return false
   }
@@ -217,7 +220,7 @@ const checkAllYSeries = () => {
 
     // check each number individually
     if (numbers.some((v) => v === '' || isNaN(Number(v)))) {
-      errorMessage.value = `Grafika ${i + 1} Y ass vērtības drīkst saturēt tikai ciparus`
+      errorMessage.value = `${i + 1} ` + t('system.data_analyzer.errors.invalid_y_axis')
       errorModal.value = true
       return false
     }
@@ -226,7 +229,31 @@ const checkAllYSeries = () => {
     if (expectedLength === null) {
       expectedLength = numbers.length
     } else if (numbers.length !== expectedLength) {
-      errorMessage.value = `Visām Y ass sērijām jābūt vienādam skaitam datu punktu!`
+      errorMessage.value = t('system.data_analyzer.errors.invalid_y_axis_series')
+      errorModal.value = true
+      return false
+    }
+  }
+
+  return true
+}
+const checkXAxisLengthMatchesY = () => {
+  // X values
+  const xValues = userChart.xAxis
+    .split(',')
+    .map(v => v.trim())
+    .filter(v => v !== '')
+
+  const xLength = xValues.length
+
+  for (let i = 0; i < userChart.seriesData.length; i++) {
+    const yValues = userChart.seriesData[i]
+      .split(',')
+      .map(v => v.trim())
+      .filter(v => v !== '')
+
+    if (yValues.length !== xLength) {
+      errorMessage.value = t('system.data_analyzer.errors.invalid_x_y_length')
       errorModal.value = true
       return false
     }
@@ -239,6 +266,7 @@ const validateChartForm = () => {
   if (!checkEmptyFields()) return false
   if (!checkXAxis()) return false
   if (!checkAllYSeries()) return false
+  if (!checkXAxisLengthMatchesY()) return false
   return true
 }
 // submit function

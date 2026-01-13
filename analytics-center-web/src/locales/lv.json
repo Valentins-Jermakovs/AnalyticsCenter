@@ -177,6 +177,44 @@
       "delete_title": "Dzēst ziņu",
       "delete_confirm": "Vai tiešām vēlaties dzēst šo ziņu",
       "empty_fields": "Lūdzu, aizpildiet visus obligātos laukus"
+    },
+    "data_analyzer": {
+      "title": "Datu analizators",
+      "subtitle": "Manuāla datu ievade",
+      "form": {
+        "form_title": "Datu vizualizācijas forma",
+        "title": "Virsraksts",
+        "type": "Diagrammas tips",
+        "description": "Apraksts",
+        "chart_title": "Diagrammas nosaukums",
+        "x_axis": "X ass vērtības",
+        "number_of_charts": "Grafiku skaits",
+        "y_axis": "Y ass vērtības",
+        "y_axis_label": "Grafika nosaukums",
+        "y_axis_data": "Grafika dati",
+        "placeholder": {
+          "title": "Ievadi virsrakstu",
+          "description": "Ievadi aprakstu",
+          "chart_title": "Ievadi diagrammas nosaukumu",
+          "x_axis": "Jan, Feb, Mar, Apk, Maj, Jun, Jul, Aug, Sep, Okt, Nov, Dec",
+          "y_axis_label": "Piem., 2025. gads"
+        }
+      },
+      "charts": {
+        "linear": "Lineārs",
+        "bar": "Stabiņu (vertikāls)",
+        "barh": "Stabiņu (horizontāls)",
+        "pie": "Pīrāga",
+        "doughnut": "Virtulis",
+        "radar": "Radar"
+      },
+      "errors": {
+        "empty_fields": "Lūdzu, aizpildiet visus obligātos laukus!",
+        "invalid_x_axis": "X ass vērtības drīkst saturēt tikai burtus, atstarpes un komatus!",
+        "invalid_y_axis": "Y ass vērtības drīkst saturēt tikai ciparus!",
+        "invalid_y_axis_series": "Visām Y ass sērijām jābūt vienādam skaitam datu punktu!",
+        "invalid_x_y_length": "X ass vērtību skaitam jāsakrīt ar Y ass datu punktu skaitu!"
+      }
     }
   },
   "common": {
@@ -194,7 +232,15 @@
     "title": "Nosaukums",
     "description": "Apraksts",
     "content": "Saturs",
-    "image_URL": "Attēla URL"
+    "image_URL": "Attēla URL",
+    "error": "Kļūda",
+    "back": "Atpakaļ",
+    "sum": "Summa",
+    "average": "Vidējais",
+    "min": "Minimums",
+    "max": "Maksimums",
+    "growth": "Pieaugums",
+    "no_data": "Nav datu"
   },
   "columns": {
     "date": "Datums",

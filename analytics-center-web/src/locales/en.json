@@ -177,6 +177,44 @@
       "delete_title": "Delete News",
       "delete_confirm": "Are you sure you want to delete this news item",
       "empty_fields": "Please fill in all required fields"
+    },
+    "data_analyzer": {
+      "title": "Data Analyzer",
+      "subtitle": "Manual Data Input",
+      "form": {
+        "form_title": "Data Visualization Form",
+        "title": "Title",
+        "type": "Chart Type",
+        "description": "Description",
+        "chart_title": "Chart Title",
+        "x_axis": "X-axis Values",
+        "number_of_charts": "Number of Charts",
+        "y_axis": "Y-axis Values",
+        "y_axis_label": "Chart Label",
+        "y_axis_data": "Chart Data",
+        "placeholder": {
+          "title": "Enter title",
+          "description": "Enter description",
+          "chart_title": "Enter chart title",
+          "x_axis": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec",
+          "y_axis_label": "e.g., year 2025"
+        }
+      },
+      "charts": {
+        "linear": "Line",
+        "bar": "Bar (Vertical)",
+        "barh": "Bar (Horizontal)",
+        "pie": "Pie",
+        "doughnut": "Doughnut",
+        "radar": "Radar"
+      },
+      "errors": {
+        "empty_fields": "Please fill in all required fields!",
+        "invalid_x_axis": "X-axis values may contain only letters, spaces, and commas!",
+        "invalid_y_axis": "Y-axis values may contain only numbers!",
+        "invalid_y_axis_series": "All Y-axis series must contain the same number of data points!",
+        "invalid_x_y_length": "The number of X-axis values must match the number of Y-axis data points!"
+      }
     }
   },
   "common": {
@@ -194,7 +232,15 @@
     "title": "Title",
     "description": "Description",
     "content": "Content",
-    "image_URL": "Image URL"
+    "image_URL": "Image URL",
+    "error": "Error",
+    "back": "Back",
+    "sum": "Sum",
+    "average": "Average",
+    "min": "Min",
+    "max": "Max",
+    "growth": "Growth",
+    "no_data": "No data"
   },
   "columns": {
     "date": "Date",
