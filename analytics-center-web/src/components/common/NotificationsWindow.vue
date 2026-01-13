@@ -1,6 +1,6 @@
 <template>
   <dialog class="modal" :open="NotificationWindow">
-    <div class="modal-box bg-base-200 flex flex-col gap-3 justify-center">
+    <div class="modal-box flex flex-col gap-3 justify-center">
       <h3 class="text-lg font-bold">Atgādinājums!</h3>
       <p v-if="events.length > 0"><span class="text-info">Notikums:</span> {{ events[0].title }}</p>
       <p v-else><span class="text-info">Notikums:</span> Nav notikuma</p>
