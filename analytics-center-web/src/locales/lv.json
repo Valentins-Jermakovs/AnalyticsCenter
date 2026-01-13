@@ -231,6 +231,9 @@
         "break_time_body": "Laiks atpūtai!",
         "error": "Jūsu pārlūks neatbalsta audio vai tas nav ieslāgts."
       }
+    },
+    "notifications": {
+      "title": "Atgādinājumi"
     }
   },
   "common": {

@@ -7,6 +7,7 @@
       <Sidebar></Sidebar>
       <!-- Scrollable child pages -->
       <div class="flex-1 bg-base-100 overflow-auto">
+        <NotificationsWindow></NotificationsWindow>
         <RouterView />
       </div>
     </div>
@@ -14,6 +15,7 @@
 </template>
 
 <script setup>
+import NotificationsWindow from '../common/NotificationsWindow.vue'
 import Sidebar from '../system/sidebar/Sidebar.vue'
 import TopBar from '../system/TopBar.vue'
 </script>

@@ -231,6 +231,9 @@
         "break_time_body": "Get back to work!",
         "error": "Your browser doesn't support audio or it is disabled."
       }
+    },
+    "notifications": {
+      "title": "Notifications"
     }
   },
   "common": {
