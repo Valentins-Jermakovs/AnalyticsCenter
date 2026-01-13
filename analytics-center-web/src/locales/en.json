@@ -233,7 +233,30 @@
       }
     },
     "notifications": {
-      "title": "Notifications"
+      "title": "Notifications",
+      "event_window": {
+        "empty_title": "No events!",
+        "empty_description": "No description!"
+      },
+      "create_modal": {
+        "window_title": "Create Event",
+        "title": "Event Title",
+        "description": "Event Description",
+        "title_placeholder": "Enter title...",
+        "description_placeholder": "Enter description...",
+        "remind": "Remind me after"
+      },
+      "status": {
+        "active": "Active",
+        "scheduled": "Scheduled"
+      },
+      "notification_modal": {
+        "title_modal": "Notification",
+        "title": "Event",
+        "empty_title": "No events!",
+        "description": "Description",
+        "empty_description": "No description!"
+      }
     }
   },
   "common": {
@@ -272,7 +295,8 @@
     "created_at": "Created At",
     "updated_at": "Updated At",
     "description": "Description",
-    "content": "Content"
+    "content": "Content",
+    "activities": "Options"
   },
   "logout": {
     "title": "Session ended",

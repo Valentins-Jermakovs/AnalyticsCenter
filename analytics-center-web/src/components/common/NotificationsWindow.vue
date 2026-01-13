@@ -1,28 +1,31 @@
 <template>
   <dialog class="modal" :open="NotificationWindow">
     <div class="modal-box flex flex-col gap-3 justify-center">
-      <h3 class="text-lg font-bold">Atgādinājums!</h3>
-      <p v-if="events.length > 0"><span class="text-info">Notikums:</span> {{ events[0].title }}</p>
-      <p v-else><span class="text-info">Notikums:</span> Nav notikuma</p>
-      <p v-if="events.length > 0">
-        <span class="text-info">Apraksts:</span> {{ events[0].description }}
+      <h3 class="text-lg font-bold">{{ t('system.notifications.notification_modal.title_modal') }}</h3>
+
+      <p>
+        <span class="text-info">{{ t('system.notifications.notification_modal.title') }}</span>
+        {{ events.length > 0 ? events[0].title : t('system.notifications.notification_modal.empty_title') }}
       </p>
-      <p v-else><span class="text-info">Apraksts:</span> Nav apraksta</p>
+
+      <p>
+        <span class="text-info">{{ t('system.notifications.notification_modal.description') }}</span>
+        {{ events.length > 0 ? events[0].description : t('system.notifications.notification_modal.empty_description') }}
+      </p>
+
       <div class="modal-action">
-        <button class="btn btn-primary" @click="closeNotificationWindow">OK</button>
+        <button class="btn btn-primary" @click="closeNotificationWindow">{{ t('common.confirm') }}</button>
       </div>
     </div>
   </dialog>
 </template>
 
-<script>
+<script setup>
+// Translations
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 import { useEventPlanner } from '@/composables/useEventPlanner'
-export default {
-  name: 'NotificationWindow',
-  setup() {
-    return useEventPlanner()
-  },
-}
+const { NotificationWindow, events, closeNotificationWindow } = useEventPlanner()
 </script>
 
 <style scoped></style>

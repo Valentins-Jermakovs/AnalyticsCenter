@@ -233,7 +233,30 @@
       }
     },
     "notifications": {
-      "title": "Atgādinājumi"
+      "title": "Atgādinājumi",
+      "event_window": {
+        "empty_title": "Notikumu nav!",
+        "empty_description": "Apraksta nav!"
+      },
+      "create_modal": {
+        "window_title": "Izveidot notikumu",
+        "title": "Notikuma virsraksts",
+        "description": "Notikuma apraksts",
+        "title_placeholder": "Ievadi virsrakstu...",
+        "description_placeholder": "Ievadi aprakstu...",
+        "remind": "Atgādināt pēc"
+      },
+      "status": {
+        "active": "Aktīvs",
+        "scheduled": "Ieplānots"
+      },
+      "notification_modal": {
+        "title_modal": "Atgādinājums",
+        "title": "Notikums",
+        "empty_title": "Notikuma nav!",
+        "description": "Apraksts",
+        "empty_description": "Apraksta nav!"
+      }
     }
   },
   "common": {
@@ -272,7 +295,8 @@
     "created_at": "Izveides datums",
     "updated_at": "Atjaunošanas datums",
     "description": "Apraksts",
-    "content": "Saturs"
+    "content": "Saturs",
+    "activities": "Operācijas"
   },
   "logout": {
     "title": "Sesija pārtraukta",

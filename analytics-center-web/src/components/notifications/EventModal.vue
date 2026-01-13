@@ -1,30 +1,34 @@
 <template>
   <dialog class="modal" :open="open">
     <div class="modal-box w-full max-w-md md:max-w-lg">
-      <h3 class="font-bold text-lg">Jauns notikums</h3>
+      <h3 class="font-bold text-lg">{{ t('system.notifications.create_modal.window_title') }}</h3>
       <form method="dialog" class="flex flex-col gap-5 mt-5">
         <div class="form-control w-full flex flex-col gap-5">
-          <label class="label"><span class="label-text">Notikuma nosaukums:</span></label>
-          <input type="text" placeholder="Ievadi notikuma nosaukumu" class="input input-bordered w-full" v-model="event.title"/>
+          <label class="label"><span class="label-text">{{ t('system.notifications.create_modal.title') }}</span></label>
+          <input type="text" required :placeholder="t('system.notifications.create_modal.title_placeholder')" class="input input-bordered w-full" v-model="event.title"/>
         </div>
         <div class="form-control w-full flex flex-col gap-5">
-          <label class="label"><span class="label-text">Notikuma apraksts:</span></label>
-          <textarea class="textarea textarea-bordered w-full" placeholder="Ievadi notikuma aprakstu" v-model="event.description"></textarea>
+          <label class="label"><span class="label-text">{{ t('system.notifications.create_modal.description') }}</span></label>
+          <textarea class="textarea textarea-bordered w-full" :placeholder="t('system.notifications.create_modal.description_placeholder')" v-model="event.description"></textarea>
         </div>
         <div class="form-control w-full flex gap-5">
-          <label class="label"><span class="label-text">Pēc cik minūtēm atgādināt:</span></label>
+          <label class="label"><span class="label-text">{{ t('system.notifications.create_modal.remind') }}</span></label>
           <NumberSelection :items="workOptions" v-model="event.time"/>
         </div>
       </form>
       <div class="modal-action">
-        <button class="btn btn-primary" @click="$emit('add-event')">Izveidot</button>
-        <button class="btn btn-neutral" @click="$emit('close')">Atcelt</button>
+        <button class="btn btn-primary" @click="$emit('add-event')">{{ t('common.create') }}</button>
+        <button class="btn btn-neutral" @click="$emit('close')">{{ t('common.cancel') }}</button>
       </div>
     </div>
   </dialog>
 </template>
 
 <script setup>
+// Translations
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
 import NumberSelection from '@/components/ui/NumberSelection.vue'
 defineProps({
   open: Boolean,

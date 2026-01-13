@@ -15,12 +15,18 @@
       </button>
     </div>
     <div class="flex justify-center items-center mt-3">
-      <button class="btn btn-primary flex-1" @click="$emit('new-event')">Jauns notikums</button>
+      <button class="btn btn-primary flex-1" @click="$emit('new-event')">
+        {{ $t('common.create') }}
+      </button>
     </div>
   </div>
 </template>
 
 <script setup>
+// Translations
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
 defineProps({
   events: Array,
   formattedTime: String

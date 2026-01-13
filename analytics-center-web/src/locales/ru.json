@@ -233,7 +233,30 @@
       }
     },
     "notifications": {
-      "title": "Уведомления"
+      "title": "Уведомления",
+      "event_window": {
+        "empty_title": "Нет уведомлений!",
+        "empty_description": "Описание отсутствует!"
+      },
+      "create_modal": {
+        "window_title": "Создать уведомление",
+        "title": "Заголовок уведомления",
+        "description": "Описание уведомления",
+        "title_placeholder": "Введите заголовок...",
+        "description_placeholder": "Введите описание...",
+        "remind": "Напомнить через"
+      },
+      "status": {
+        "active": "Активно",
+        "scheduled": "Запланировано"
+      },
+      "notification_modal": {
+        "title_modal": "Напоминание",
+        "title": "Событие",
+        "empty_title": "Событий нету!",
+        "description": "Описание",
+        "empty_description": "Описание отсутствует!"
+      }
     }
   },
   "common": {
@@ -272,7 +295,8 @@
     "created_at": "Дата создания",
     "updated_at": "Дата обновления",
     "description": "Описание",
-    "content": "Содержание"
+    "content": "Содержание",
+    "activities": "Опции"
   },
   "logout": {
     "title": "Сессия завершена",

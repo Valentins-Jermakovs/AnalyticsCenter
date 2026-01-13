@@ -7,18 +7,18 @@
         v-if="!events.length"
         @click="$emit('new-event')"
       >
-        <h1 class="text-4xl opacity-30">Nav notikumu</h1>
+        <h1 class="text-4xl opacity-30">{{ t('system.notifications.event_window.empty_title') }}</h1>
         <font-awesome-icon icon="fa-solid fa-square-plus" size="2xl" class="opacity-40"/>
       </div>
 
       <table class="table bg-base-200 border border-base-300 rounded-field w-full" v-else>
         <thead>
           <tr>
-            <th>Nosaukums</th>
-            <th>Apraksts</th>
-            <th>Laiks</th>
-            <th>Statuss</th>
-            <th class="text-center">Operācijas</th>
+            <th>{{ t('columns.title') }}</th>
+            <th>{{ t('columns.description') }}</th>
+            <th>{{ t('columns.time') }}</th>
+            <th>{{ t('columns.status') }}</th>
+            <th class="text-center">{{ t('columns.activities') }}</th>
           </tr>
         </thead>
         <tbody>
@@ -33,13 +33,13 @@
                   <div class="status" :class="event.status ? 'status-success':'status-warning'"></div>
                 </div>
                 <div>
-                  <p>{{ event.status ? 'Aktīvs':'Ieplānots' }}</p>
+                  <p>{{ event.status ? t('system.notifications.status.active'):t('system.notifications.status.scheduled') }}</p>
                 </div>
               </div>
             </td>
             <td class="flex flex-col gap-2 justify-center">
-              <button class="btn btn-neutral btn-sm" @click="$emit('read-event',index)">Lasīt</button>
-              <button class="btn btn-error btn-sm" @click="$emit('delete-event',index)">Izdzēst</button>
+              <button class="btn btn-neutral btn-sm" @click="$emit('read-event',index)">{{ t('common.read') }}</button>
+              <button class="btn btn-error btn-sm" @click="$emit('delete-event',index)">{{ t('common.delete') }}</button>
             </td>
           </tr>
         </tbody>
@@ -49,6 +49,9 @@
 </template>
 
 <script setup>
+// Translations
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 defineProps({
   events: Array
 })

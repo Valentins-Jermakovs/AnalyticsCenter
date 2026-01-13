@@ -50,8 +50,10 @@
 <script setup>
 import Header from '@/components/ui/Header.vue'
 import { ref, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useEventPlanner } from '@/composables/useEventPlanner'
+// Translations
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
 // Components
 import EventWindow from '@/components/notifications/EventWindow.vue'
@@ -60,7 +62,7 @@ import EventList from '@/components/notifications/EventList.vue'
 import ReadEventModal from '@/components/notifications/ReadEventModal.vue'
 import DeleteEventModal from '@/components/notifications/DeleteEventModal.vue'
 
-const { t } = useI18n()
+
 const title = computed(() => t('system.notifications.title'))
 import notificationImage from '@/assets/images/igor-omilaev-GCakG_Kr0UM-unsplash.jpg'
 const image = notificationImage
