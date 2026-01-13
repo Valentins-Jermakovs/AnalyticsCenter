@@ -217,6 +217,20 @@
         "invalid_y_axis_series": "Visām Y ass sērijām jābūt vienādam skaitam datu punktu!",
         "invalid_x_y_length": "X ass vērtību skaitam jāsakrīt ar Y ass datu punktu skaitu!"
       }
+    },
+    "pomodoro": {
+      "title": "Taimeris",
+      "settings": "Iestatījumi",
+      "sessions_number": "Sessiju skaits",
+      "work_time": "Darba ilgums",
+      "break_time": "Pārtraukuma ilgums",
+      "notifications": {
+        "work_time_title": "Darba laiks pabeigts!",
+        "break_time_title": "Pārtraukuma laiks pabeigts!",
+        "work_time_body": "Laiks darbam!",
+        "break_time_body": "Laiks atpūtai!",
+        "error": "Jūsu pārlūks neatbalsta audio vai tas nav ieslāgts."
+      }
     }
   },
   "common": {

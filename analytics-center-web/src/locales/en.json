@@ -217,6 +217,20 @@
         "invalid_y_axis_series": "All Y-axis series must contain the same number of data points!",
         "invalid_x_y_length": "The number of X-axis values must match the number of Y-axis data points!"
       }
+    },
+    "pomodoro": {
+      "timer": "Timer",
+      "settings": "Settings",
+      "sessions_number": "Sessions Number",
+      "work_time": "Work Time",
+      "break_time": "Break Time",
+      "notifications": {
+        "work_time_title": "Work time is up!",
+        "break_time_title": "Break time is up!",
+        "work_time_body": "Take a break!",
+        "break_time_body": "Get back to work!",
+        "error": "Your browser doesn't support audio or it is disabled."
+      }
     }
   },
   "common": {
