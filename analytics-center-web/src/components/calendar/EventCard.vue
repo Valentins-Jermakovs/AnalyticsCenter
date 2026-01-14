@@ -18,10 +18,7 @@
       <!-- Actions -->
       <div class="card-actions justify-end mt-2">
         <button class="btn btn-sm btn-neutral">
-          Apskatīt
-        </button>
-        <button class="btn btn-sm btn-primary">
-          Rediģēt
+          {{ t('common.read') }}
         </button>
       </div>
     </div>
@@ -29,6 +26,8 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 defineProps({
   title: {
     type: String,

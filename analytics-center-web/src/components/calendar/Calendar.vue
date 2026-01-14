@@ -32,12 +32,17 @@ import { ref, computed } from 'vue'
 import CalendarHeader from './CalendarHeader.vue'
 import CalendarGrid from './CalendarGrid.vue'
 import EventCard from './EventCard.vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
-const months = [
-  'Janvāris', 'Februāris', 'Marts', 'Aprīlis',
-  'Maijs', 'Jūnijs', 'Jūlijs', 'Augusts',
-  'Septembris', 'Oktobris', 'Novembris', 'Decembris'
-]
+const months = computed(() => [
+  t('system.calendar.months.january'), t('system.calendar.months.february'),
+  t('system.calendar.months.march'), t('system.calendar.months.april'),
+  t('system.calendar.months.may'), t('system.calendar.months.june'),
+  t('system.calendar.months.july'), t('system.calendar.months.august'),
+  t('system.calendar.months.september'), t('system.calendar.months.october'),
+  t('system.calendar.months.november'), t('system.calendar.months.december')
+])
 
 const currentYear = ref(new Date().getFullYear())
 const currentMonth = ref(new Date().getMonth())

@@ -6,10 +6,10 @@
       <div class="flex flex-col sm:flex-row gap-3 mb-4">
         <input
           class="input input-bordered w-full"
-          placeholder="Meklēt..."
+          :placeholder="t('common.search')"
         />
         <button class="btn btn-primary w-full sm:w-auto">
-          Meklēt
+          {{ t('common.search') }}
         </button>
       </div>
 
@@ -19,10 +19,12 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Nosaukums</th>
-              <th>Datums</th>
-              <th>Laiks</th>
-              <th class="text-right">Opcijas</th>
+              <th>{{ t('columns.title') }}</th>
+              <th>{{ t('columns.date') }}</th>
+              <th>{{ t('columns.time') }}</th>
+              <th class="text-right">
+                {{ t('columns.actions') }}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -34,10 +36,10 @@
               <td>
                 <div class="flex justify-end gap-2">
                   <button class="btn btn-xs btn-secondary">
-                    Lasīt
+                    {{ t('common.read') }}
                   </button>
                   <button class="btn btn-xs btn-primary">
-                    Edit
+                    {{ t('common.edit') }}
                   </button>
                 </div>
               </td>
@@ -64,10 +66,10 @@
 
             <div class="flex gap-2 pt-2">
               <button class="btn btn-sm btn-secondary flex-1">
-                Lasīt
+                {{ t('common.read') }}
               </button>
               <button class="btn btn-sm btn-primary flex-1">
-                Edit
+                {{ t('common.edit') }}
               </button>
             </div>
           </div>
@@ -79,4 +81,8 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 </script>
+
+<style scoped></style>

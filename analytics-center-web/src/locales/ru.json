@@ -261,7 +261,30 @@
     "calendar": {
       "title": "Календарь",
       "events": "События",
-      "events_planner": "Планер событий"
+      "events_planner": "Планер событий",
+      "form": {
+        "event_title": "Название события:",
+        "event_title_placeholder": "Введите название события...",
+        "event_date": "Дата события:",
+        "event_start": "Начало:",
+        "event_end": "Окончание:",
+        "event_description": "Описание:",
+        "event_description_placeholder": "Введите описание события..."
+      },
+      "months": {
+        "january": "Январь",
+        "february": "Февраль",
+        "march": "Март",
+        "april": "Апрель",
+        "may": "Май",
+        "june": "Июнь",
+        "july": "Июль",
+        "august": "Август",
+        "september": "Сентябрь",
+        "october": "Октябрь",
+        "november": "Ноябрь",
+        "december": "Декабрь"
+      }
     }
   },
   "common": {

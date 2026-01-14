@@ -261,7 +261,30 @@
     "calendar": {
       "title": "Kalendārs",
       "events": "Notikumi",
-      "events_planner": "Notikumu plānošana"
+      "events_planner": "Notikumu plānošana",
+      "form": {
+        "event_title": "Notikuma nosaukums:",
+        "event_title_placeholder": "Ievadi notikuma nosaukumu...",
+        "event_date": "Notikuma datums:",
+        "event_start": "Sākums:",
+        "event_end": "Beigas:",
+        "event_description": "Apraksts:",
+        "event_description_placeholder": "Ievadi notikuma aprakstu..."
+      },
+      "months": {
+        "january": "Janvāris",
+        "february": "Februāris",
+        "march": "Marts",
+        "april": "Aprīlis",
+        "may": "Maijs",
+        "june": "Jūnis",
+        "july": "Jūlijs",
+        "august": "Augusts",
+        "september": "Septembris",
+        "october": "Oktobris",
+        "november": "Novembris",
+        "december": "Decembris"
+      }
     }
   },
   "common": {
