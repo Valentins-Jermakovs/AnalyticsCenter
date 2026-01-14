@@ -257,6 +257,11 @@
         "description": "Описание",
         "empty_description": "Описание отсутствует!"
       }
+    },
+    "calendar": {
+      "title": "Календарь",
+      "events": "События",
+      "events_planner": "Планер событий"
     }
   },
   "common": {

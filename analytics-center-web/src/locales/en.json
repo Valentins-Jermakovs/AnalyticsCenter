@@ -257,6 +257,11 @@
         "description": "Description",
         "empty_description": "No description!"
       }
+    },
+    "calendar": {
+      "title": "Calendar",
+      "events": "Events",
+      "events_planner": "Events Scheduling"
     }
   },
   "common": {

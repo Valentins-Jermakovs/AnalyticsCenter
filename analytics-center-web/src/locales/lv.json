@@ -257,6 +257,11 @@
         "description": "Apraksts",
         "empty_description": "Apraksta nav!"
       }
+    },
+    "calendar": {
+      "title": "Kalendārs",
+      "events": "Notikumi",
+      "events_planner": "Notikumu plānošana"
     }
   },
   "common": {
