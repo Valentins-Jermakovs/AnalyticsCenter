@@ -306,5 +306,11 @@
     "404": "Lapa netika atrasta",
     "500": "Servera kļūda",
     "empty_field": "Aizpildiet lauku!"
+  },
+  "eye_rest": {
+    "title": "Atpūtiniet acis",
+    "content": "Paskaties prom no ekrāna uz 20 sekundēm.",
+    "later": "Vēlāk",
+    "close": "Labi"
   }
 }

@@ -306,5 +306,11 @@
     "404": "Page not found",
     "500": "Internal server error",
     "empty_field": "Please fill in all required field!"
+  },
+  "eye_rest": {
+    "title": "Rest Your Eyes",
+    "content": "Look away from the screen for 20 seconds.",
+    "later": "Later",
+    "close": "OK"
   }
 }

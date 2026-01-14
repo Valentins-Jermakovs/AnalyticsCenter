@@ -3,18 +3,18 @@
   <transition name="fade">
     <div v-if="show" class="fixed bottom-5 right-5 z-50">
       <div class="p-5 alert bg-base-100 shadow-lg rounded-box w-80 flex flex-col gap-2 border border-base-300">
-        <h3 class="font-semibold text-lg flex items-center gap-2">Acu atpūta</h3>
+        <h3 class="font-semibold text-lg flex items-center gap-2">{{  t('eye_rest.title') }}</h3>
 
         <p class="my-5">
-          Paskaties prom no ekrāna uz 20 sekundēm.
+          {{  t('eye_rest.content') }}
         </p>
 
         <div class="flex justify-end gap-2">
           <button class="btn btn-neutral" @click="later">
-            Vēlāk
+            {{  t('eye_rest.later') }}
           </button>
           <button class="btn btn-primary" @click="close">
-            Labi
+            {{  t('eye_rest.close') }}
           </button>
         </div>
       </div>
@@ -24,6 +24,9 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+// Translations
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
 const show = ref(true)
 let timer = null
