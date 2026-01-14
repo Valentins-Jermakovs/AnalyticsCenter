@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="card bg-base-100 border border-base-300 shadow-sm hover:shadow-md transition"
-  >
+  <div class="card bg-base-100 border border-base-300 shadow-sm hover:shadow-md transition">
     <div class="card-body gap-2">
       <!-- Title -->
       <h3 class="card-title text-lg">
@@ -31,15 +29,15 @@ const { t } = useI18n()
 defineProps({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   date: {
     type: String,
-    required: true
+    required: true,
   },
   time: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 })
 </script>

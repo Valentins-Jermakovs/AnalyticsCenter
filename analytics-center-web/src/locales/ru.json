@@ -41,16 +41,26 @@
   "system": {
     "topbar": {
       "title": "Центр Аналитики",
-      "search": "Поиск",
+      "email": "Письмо",
       "language": "Язык",
       "support": "Поддержка",
       "settings": "Настройки",
       "logout": "Выход",
       "modals": {
-        "search": {
-          "title": "Поиск",
-          "placeholder": "Поиск...",
-          "cancel": "Закрыть"
+        "email": {
+          "title": "Письмо в техническую поддержку",
+          "form_username": "ФИО",
+          "username_placeholder": "Введите ваше имя и фамилию...",
+          "form_email": "Электронная почта",
+          "email_placeholder": "Введите ваш e-mail...",
+          "form_telephone": "Номер телефона",
+          "telephone_placeholder": "Введите номер телефона...",
+          "form_title": "Тема",
+          "title_placeholder": "Введите тему...",
+          "form_content": "Содержание письма",
+          "content_placeholder": "Введите содержание письма...",
+          "received_title": "Ваше письмо отправлено",
+          "received_subtitle": "Мы ответим в ближайшее время"
         },
         "language": {
           "title": "Язык",

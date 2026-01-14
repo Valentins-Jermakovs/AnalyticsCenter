@@ -2,12 +2,11 @@
   <div class="w-full lg:w-1/2 xl:w-1/3 mx-auto lg:py-5">
     <div class="card bg-base-200 border border-base-300">
       <div class="card-body gap-4">
-
         <!-- Title -->
         <div class="form-control flex flex-col gap-1">
           <label class="label">
             <span class="label-text">
-                {{ t('system.calendar.form.event_title') }}
+              {{ t('system.calendar.form.event_title') }}
             </span>
           </label>
           <input
@@ -21,13 +20,10 @@
         <div class="form-control flex flex-col gap-1">
           <label class="label">
             <span class="label-text">
-                {{ t('system.calendar.form.event_date') }}
+              {{ t('system.calendar.form.event_date') }}
             </span>
           </label>
-          <input
-            type="date"
-            class="input input-bordered w-full"
-          />
+          <input type="date" class="input input-bordered w-full" />
         </div>
 
         <!-- Time range -->
@@ -38,10 +34,7 @@
                 {{ t('system.calendar.form.event_start') }}
               </span>
             </label>
-            <input
-              type="time"
-              class="input input-bordered"
-            />
+            <input type="time" class="input input-bordered" />
           </div>
 
           <div class="form-control">
@@ -50,10 +43,7 @@
                 {{ t('system.calendar.form.event_end') }}
               </span>
             </label>
-            <input
-              type="time"
-              class="input input-bordered"
-            />
+            <input type="time" class="input input-bordered" />
           </div>
         </div>
 
@@ -61,7 +51,7 @@
         <div class="form-control flex flex-col gap-1">
           <label class="label">
             <span class="label-text">
-                {{ t('system.calendar.form.event_description') }}
+              {{ t('system.calendar.form.event_description') }}
             </span>
           </label>
           <textarea
@@ -74,7 +64,6 @@
         <button class="btn btn-primary mt-2">
           {{ t('common.create') }}
         </button>
-
       </div>
     </div>
   </div>

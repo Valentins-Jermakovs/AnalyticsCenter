@@ -7,6 +7,7 @@ import SystemLayout from '@/components/layout/SystemLayout.vue' // system layout
 import LogoutView from '@/views/logout/LogoutView.vue' // logout
 
 import NotFound from '@/views/errors/NotFound.vue' // 404 error
+import EmailRedirect from '@/components/common/EmailRedirect.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,12 @@ const router = createRouter({
       path: '/',
       name: 'landing',
       component: LandingView,
+    },
+    // Email redirect
+    {
+      path: '/email-redirect',
+      name: 'email-redirect',
+      component: EmailRedirect,
     },
     {
       path: '/login',

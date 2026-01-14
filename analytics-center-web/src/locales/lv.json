@@ -41,16 +41,26 @@
   "system": {
     "topbar": {
       "title": "Analītikas centrs",
-      "search": "Meklēt",
+      "email": "Vēstule",
       "language": "Valoda",
       "support": "Palīdzība",
       "settings": "Iestatījumi",
       "logout": "Iziet",
       "modals": {
-        "search": {
-          "title": "Meklēt",
-          "placeholder": "Meklēt...",
-          "cancel": "Aizvērt"
+        "email": {
+          "title": "Vēstule tehniskam atbalstam",
+          "form_username": "Vārds, uzvārds",
+          "username_placeholder": "Ievadiet vārdu, uzvārdu...",
+          "form_email": "E-pasts",
+          "email_placeholder": "Ievadiet e-pastu...",
+          "form_telephone": "Telefona numuru",
+          "telephone_placeholder": "Ievadiet telefona numuru...",
+          "form_title": "Temats",
+          "title_placeholder": "Ievadiet tematu...",
+          "form_content": "Vēstules saturs",
+          "content_placeholder": "Ievadiet vēstules saturu...",
+          "received_title": "Jūsu vēstule saņemta",
+          "received_subtitle": "Mēs atbildēsim pēc iespējas ātrāk"
         },
         "language": {
           "title": "Valoda",

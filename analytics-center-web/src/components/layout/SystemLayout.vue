@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import EyeRestReminder from '../common/EyeRestReminder.vue';
+import EyeRestReminder from '../common/EyeRestReminder.vue'
 import NotificationsWindow from '../common/NotificationsWindow.vue'
 import Sidebar from '../system/sidebar/Sidebar.vue'
 import TopBar from '../system/TopBar.vue'

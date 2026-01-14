@@ -8,6 +8,17 @@
       <!-- logo -->
       <logo></logo>
     </div>
+    <!-- Date & Time -->
+    <div class="flex gap-3 rounded-field bg-base-200 font-semibold">
+      <!-- DATE -->
+      <h1>
+        {{ date }}
+      </h1>
+      <!-- TIME -->
+      <h1>
+        {{ time }}
+      </h1>
+    </div>
     <!-- RIGHT: buttons -->
     <div class="flex">
       <top-button
@@ -18,16 +29,13 @@
         @click="item.modal && openModal(item.modal)"
       ></top-button>
     </div>
-    <!-- Search Modal -->
+    <!-- Email Modal -->
     <BaseDialog
-      v-model="searchModal"
-      :title="$t('system.topbar.modals.search.title')"
-      :cancel-text="$t('system.topbar.modals.search.cancel')"
+      v-model="emailModal"
+      :title="$t('system.topbar.modals.email.title')"
+      :cancel-text="$t('common.cancel')"
     >
-      <input
-        class="input input-bordered w-full"
-        :placeholder="$t('system.topbar.modals.search.placeholder')"
-      />
+      <ContactForm></ContactForm>
     </BaseDialog>
 
     <!-- Language Modal -->
@@ -105,19 +113,20 @@ const policy = {
 
 const documents = [userManual, license, policy]
 
-import { ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import BurgerButton from './topbar/BurgerButton.vue'
 import Logo from './topbar/Logo.vue'
 import TopButton from './topbar/TopButton.vue'
 import BaseDialog from '../ui/BaseDialog.vue'
+import ContactForm from '../common/ContactForm.vue'
 
 const router = useRouter()
 
 // navigation
 const navigation = [
-  { titleKey: 'system.topbar.search', icon: 'fa-solid fa-magnifying-glass', modal: 'search' },
+  { titleKey: 'system.topbar.email', icon: 'fa-solid fa-envelope', modal: 'email' },
   { titleKey: 'system.topbar.language', icon: 'fa-solid fa-globe', modal: 'language' },
   { titleKey: 'system.topbar.support', icon: 'fa-solid fa-question-circle', modal: 'support' },
   { titleKey: 'system.topbar.logout', icon: 'fa-solid fa-circle-xmark', modal: 'logout' },
@@ -125,13 +134,13 @@ const navigation = [
 
 // modals
 const supportModal = ref(false)
-const searchModal = ref(false)
+const emailModal = ref(false)
 const languageModal = ref(false)
 const logoutModal = ref(false)
 
 // open modal logic
 const openModal = (modalName) => {
-  if (modalName === 'search') searchModal.value = true
+  if (modalName === 'email') emailModal.value = true
   else if (modalName === 'language') languageModal.value = true
   else if (modalName === 'logout') logoutModal.value = true
   else if (modalName === 'support') supportModal.value = true
@@ -150,6 +159,24 @@ const changeLocale = (code) => {
   locale.value = code
   languageModal.value = false
 }
+
+const date = ref(new Date().toLocaleDateString())
+const time = ref('')
+const timer = ref(null)
+const updateTime = () => {
+  timer.value = setTimeout(() => {
+    time.value = new Date().toLocaleTimeString()
+    // Remove seconds from time
+    time.value = time.value.slice(0, -3)
+    updateTime()
+  }, 1000)
+}
+onMounted(() => {
+  updateTime()
+})
+onUnmounted(() => {
+  clearTimeout(timer)
+})
 </script>
 
 <style scoped></style>

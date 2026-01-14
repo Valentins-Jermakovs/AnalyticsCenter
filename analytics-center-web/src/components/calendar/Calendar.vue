@@ -9,20 +9,11 @@
         @next="nextMonth"
       />
 
-      <CalendarGrid
-        :days="calendarDays"
-        :isToday="isToday"
-      />
+      <CalendarGrid :days="calendarDays" :isToday="isToday" />
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-base-200 p-3 border border-base-300">
-      <EventCard
-        v-for="i in 3"
-        :key="i"
-        title="Notikums"
-        date="17/01/2025"
-        time="10:30 - 11:30"
-      />
+      <EventCard v-for="i in 3" :key="i" title="Notikums" date="17/01/2025" time="10:30 - 11:30" />
     </div>
   </div>
 </template>
@@ -36,12 +27,18 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 const months = computed(() => [
-  t('system.calendar.months.january'), t('system.calendar.months.february'),
-  t('system.calendar.months.march'), t('system.calendar.months.april'),
-  t('system.calendar.months.may'), t('system.calendar.months.june'),
-  t('system.calendar.months.july'), t('system.calendar.months.august'),
-  t('system.calendar.months.september'), t('system.calendar.months.october'),
-  t('system.calendar.months.november'), t('system.calendar.months.december')
+  t('system.calendar.months.january'),
+  t('system.calendar.months.february'),
+  t('system.calendar.months.march'),
+  t('system.calendar.months.april'),
+  t('system.calendar.months.may'),
+  t('system.calendar.months.june'),
+  t('system.calendar.months.july'),
+  t('system.calendar.months.august'),
+  t('system.calendar.months.september'),
+  t('system.calendar.months.october'),
+  t('system.calendar.months.november'),
+  t('system.calendar.months.december'),
 ])
 
 const currentYear = ref(new Date().getFullYear())
@@ -52,11 +49,7 @@ const calendarDays = computed(() => {
   let startDay = firstDay.getDay() - 1
   if (startDay < 0) startDay = 6
 
-  const daysInMonth = new Date(
-    currentYear.value,
-    currentMonth.value + 1,
-    0
-  ).getDate()
+  const daysInMonth = new Date(currentYear.value, currentMonth.value + 1, 0).getDate()
 
   const days = []
   for (let i = 0; i < startDay; i++) days.push(null)

@@ -95,6 +95,6 @@ const workOptions = [
 
 const activePage = ref('notifications')
 const navButtons = computed(() => [
-  { title: t('system.notifications.title'), key: 'notifications' }
+  { title: t('system.notifications.title'), key: 'notifications' },
 ])
 </script>

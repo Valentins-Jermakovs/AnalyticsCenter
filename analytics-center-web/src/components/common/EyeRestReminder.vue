@@ -2,19 +2,21 @@
   <!-- Eye Rest Reminder -->
   <transition name="fade">
     <div v-if="show" class="fixed bottom-5 right-5 z-50">
-      <div class="p-5 alert bg-base-100 shadow-lg rounded-box w-80 flex flex-col gap-2 border border-base-300">
-        <h3 class="font-semibold text-lg flex items-center gap-2">{{  t('eye_rest.title') }}</h3>
+      <div
+        class="p-5 alert bg-base-100 shadow-lg rounded-box w-80 flex flex-col gap-2 border border-base-300"
+      >
+        <h3 class="font-semibold text-lg flex items-center gap-2">{{ t('eye_rest.title') }}</h3>
 
         <p class="my-5">
-          {{  t('eye_rest.content') }}
+          {{ t('eye_rest.content') }}
         </p>
 
         <div class="flex justify-end gap-2">
           <button class="btn btn-neutral" @click="later">
-            {{  t('eye_rest.later') }}
+            {{ t('eye_rest.later') }}
           </button>
           <button class="btn btn-primary" @click="close">
-            {{  t('eye_rest.close') }}
+            {{ t('eye_rest.close') }}
           </button>
         </div>
       </div>
@@ -56,7 +58,6 @@ onBeforeUnmount(() => {
   if (timer) clearTimeout(timer)
 })
 </script>
-
 
 <style scoped>
 .fade-enter-active,

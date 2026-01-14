@@ -41,16 +41,26 @@
   "system": {
     "topbar": {
       "title": "Analytics Center",
-      "search": "Search",
+      "email": "Email",
       "language": "Language",
       "support": "Support",
       "settings": "Settings",
       "logout": "Logout",
       "modals": {
-        "search": {
-          "title": "Search",
-          "placeholder": "Search...",
-          "cancel": "Cancel"
+        "email": {
+          "title": "Technical Support Email",
+          "form_username": "Full Name",
+          "username_placeholder": "Enter your full name...",
+          "form_email": "Email",
+          "email_placeholder": "Enter your email...",
+          "form_telephone": "Phone Number",
+          "telephone_placeholder": "Enter your phone number...",
+          "form_title": "Subject",
+          "title_placeholder": "Enter the subject...",
+          "form_content": "Message Content",
+          "content_placeholder": "Enter the message content...",
+          "received_title": "Your email has been sent",
+          "received_subtitle": "We will respond as soon as possible"
         },
         "language": {
           "title": "Language",
