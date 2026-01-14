@@ -28,7 +28,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
-const show = ref(true)
+const show = ref(false)
 let timer = null
 
 const remind = (time) => {
