@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid grid-cols-1 md:grid-cols-2 gap-5 bg-base-100 rounded-box border border-base-300 p-5"
+    class="grid grid-cols-1 md:grid-cols-2 gap-5 bg-base-200 rounded-box border border-base-300 p-5"
   >
     <!-- Event details -->
     <EventDetails :event="currentEvent" />

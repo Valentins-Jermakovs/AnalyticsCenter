@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col gap-3">
-    <div class="flex flex-1 overflow-auto bg-base-100 border border-base-300 rounded-box p-5">
+    <div class="flex flex-1 overflow-auto bg-base-200 border border-base-300 rounded-box p-5">
       <div
-        class="w-full h-full rounded-field bg-base-200 p-5 flex flex-col gap-5 items-center justify-center cursor-pointer"
+        class="w-full h-full rounded-field bg-base-100 border border-base-300 p-5 flex flex-col gap-5 items-center justify-center cursor-pointer"
         v-if="!events.length"
         @click="$emit('new-event')"
       >

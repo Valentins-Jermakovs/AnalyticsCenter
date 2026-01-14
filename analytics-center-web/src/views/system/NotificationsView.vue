@@ -1,6 +1,6 @@
 <template>
   <Header :title="title" :imageUrl="image"></Header>
-
+  <NavigationPanel v-model="activePage" :buttons="navButtons" />
   <div class="flex flex-col gap-5 p-5">
     <!-- Event window -->
     <EventWindow
@@ -58,7 +58,8 @@ import ReadEventModal from '@/components/notifications/ReadEventModal.vue'
 import DeleteEventModal from '@/components/notifications/DeleteEventModal.vue'
 
 const title = computed(() => t('system.notifications.title'))
-import notificationImage from '@/assets/images/igor-omilaev-GCakG_Kr0UM-unsplash.jpg'
+import notificationImage from '@/assets/images/lilartsy-ckdP8e75-0A-unsplash.jpg'
+import NavigationPanel from '@/components/ui/NavigationPanel.vue'
 const image = notificationImage
 
 const {
@@ -91,4 +92,9 @@ const workOptions = [
   { title: '50 min', value: 50 },
   { title: '60 min', value: 60 },
 ]
+
+const activePage = ref('notifications')
+const navButtons = computed(() => [
+  { title: t('system.notifications.title'), key: 'notifications' }
+])
 </script>

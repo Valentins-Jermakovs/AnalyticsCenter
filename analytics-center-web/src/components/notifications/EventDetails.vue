@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col rounded-field border border-base-300 bg-base-200 p-5">
+  <div class="flex flex-col rounded-field border border-base-300 bg-base-100 p-5">
     <div class="w-full flex items-center justify-center">
       <h1 class="text-2xl text-center">
         {{ event ? event.title : t('system.notifications.event_window.empty_title') }}

@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-3">
-    <div class="flex bg-base-200 rounded-field p-5 items-center justify-center">
+    <div class="flex bg-base-100 border border-base-300 rounded-field p-5 items-center justify-center">
       <h1 class="text-4xl">{{ formattedTime }}</h1>
     </div>
     <div class="flex flex-col sm:flex-row justify-around gap-3">
