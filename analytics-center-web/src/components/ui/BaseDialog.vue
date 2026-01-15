@@ -2,11 +2,11 @@
   <dialog class="modal" :open="modelValue">
     <div class="modal-box flex flex-col gap-3">
       <!-- Title -->
-      <h3 v-if="title" class="text-lg font-bold">
+      <h3 v-if="title" class="text-lg font-bold text-start">
         {{ title }}
       </h3>
       <!-- Content -->
-      <div class="modal-content">
+      <div class="modal-content flex justify-start">
         <slot></slot>
       </div>
       <!-- Actions -->

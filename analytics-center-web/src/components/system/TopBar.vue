@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex bg-base-200 items-center pl-2 pr-4 py-2 border-b border-base-300 justify-between"
-  >
+  <div class="flex bg-base-200 items-center pl-2 pr-4 py-2 border-b border-base-300 justify-between">
     <!-- LEFT: burger + logo -->
     <div class="flex items-center gap-4">
       <burger-button></burger-button>
@@ -21,60 +19,38 @@
     </div>
     <!-- RIGHT: buttons -->
     <div class="flex">
-      <top-button
-        v-for="(item, index) in navigation"
-        :key="index"
-        :titleKey="item.titleKey"
-        :icon="item.icon"
-        @click="item.modal && openModal(item.modal)"
-      ></top-button>
+      <top-button v-for="(item, index) in navigation" :key="index" :titleKey="item.titleKey" :icon="item.icon"
+        @click="item.modal && openModal(item.modal)"></top-button>
     </div>
     <!-- Email Modal -->
-    <BaseDialog
-      v-model="emailModal"
-      :title="$t('system.topbar.modals.email.title')"
-      :cancel-text="$t('common.cancel')"
-    >
+    <BaseDialog v-model="emailModal" :title="$t('system.topbar.modals.email.title')" :cancel-text="$t('common.cancel')">
       <ContactForm></ContactForm>
     </BaseDialog>
 
     <!-- Language Modal -->
-    <BaseDialog
-      v-model="languageModal"
-      :title="$t('system.topbar.modals.language.title')"
-      :cancel-text="$t('system.topbar.modals.language.cancel')"
-    >
-      <button
-        class="btn btn-neutral hover:btn-primary btn-sm w-full mb-2"
-        @click="changeLocale('en')"
-      >
-        {{ $t('system.topbar.modals.language.english') }}
-      </button>
-      <button
-        class="btn btn-neutral hover:btn-primary btn-sm w-full mb-2"
-        @click="changeLocale('lv')"
-      >
-        {{ $t('system.topbar.modals.language.latvian') }}
-      </button>
-      <button class="btn btn-neutral hover:btn-primary btn-sm w-full" @click="changeLocale('ru')">
-        {{ $t('system.topbar.modals.language.russian') }}
-      </button>
+    <BaseDialog v-model="languageModal" :title="$t('system.topbar.modals.language.title')"
+      :cancel-text="$t('system.topbar.modals.language.cancel')">
+      <div class="w-full flex-col flex">
+        <button class="btn btn-neutral hover:btn-primary btn-sm w-full mb-2" @click="changeLocale('en')">
+          {{ $t('system.topbar.modals.language.english') }}
+        </button>
+        <button class="btn btn-neutral hover:btn-primary btn-sm w-full mb-2" @click="changeLocale('lv')">
+          {{ $t('system.topbar.modals.language.latvian') }}
+        </button>
+        <button class="btn btn-neutral hover:btn-primary btn-sm w-full" @click="changeLocale('ru')">
+          {{ $t('system.topbar.modals.language.russian') }}
+        </button>
+      </div>
     </BaseDialog>
 
     <!-- Support Modal -->
-    <BaseDialog
-      v-model="supportModal"
-      :title="$t('common.support')"
-      :cancel-text="$t('system.topbar.modals.language.cancel')"
-    >
+    <BaseDialog v-model="supportModal" :title="$t('common.support')"
+      :cancel-text="$t('system.topbar.modals.language.cancel')">
       <!-- 3 books -->
       <!-- License, User manual, Policy -->
-      <div class="flex flex-col gap-2">
-        <div
-          v-for="(doc, index) in documents"
-          :key="index"
-          class="flex-1 flex flex-col bg-base-200 border border-base-300 p-5 hover:scale-105 transform transition-transform duration-500"
-        >
+      <div class="flex flex-col gap-2 w-full">
+        <div v-for="(doc, index) in documents" :key="index"
+          class=" flex-1 flex flex-col bg-base-200 border border-base-300 p-5 hover:scale-105 transform transition-transform duration-500">
           <a :href="doc.link" target="_blank" class="hover:underline">
             <font-awesome-icon icon="fa-regular fa-circle-question" />
             {{ doc.title }}
@@ -84,13 +60,9 @@
     </BaseDialog>
 
     <!-- Logout Modal -->
-    <BaseDialog
-      v-model="logoutModal"
-      :title="$t('system.topbar.modals.logout.title')"
-      :confirm-text="$t('system.topbar.modals.logout.confirm')"
-      :cancel-text="$t('system.topbar.modals.logout.cancel')"
-      @confirm="handleLogout"
-    >
+    <BaseDialog v-model="logoutModal" :title="$t('system.topbar.modals.logout.title')"
+      :confirm-text="$t('system.topbar.modals.logout.confirm')" :cancel-text="$t('system.topbar.modals.logout.cancel')"
+      @confirm="handleLogout">
       {{ $t('system.topbar.modals.logout.content') }}
     </BaseDialog>
   </div>

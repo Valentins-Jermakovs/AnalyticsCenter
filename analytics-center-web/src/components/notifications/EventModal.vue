@@ -10,12 +10,12 @@
             <span class="label-text">{{ t('system.notifications.create_modal.title') }}</span>
           </label>
           <input
+            required
             type="text"
             placeholder="Ievadi nosaukumu"
             class="input input-bordered w-full"
             v-model="event.title"
           />
-          <p v-if="errors.title" class="text-red-500 text-sm">{{ errors.title }}</p>
         </div>
 
         <!-- Description -->
@@ -24,11 +24,11 @@
             <span class="label-text">{{ t('system.notifications.create_modal.description') }}</span>
           </label>
           <textarea
+            required
             placeholder="Ievadi aprakstu"
             class="textarea textarea-bordered w-full"
             v-model="event.description"
           ></textarea>
-          <p v-if="errors.description" class="text-red-500 text-sm">{{ errors.description }}</p>
         </div>
 
         <!-- Time selection -->
@@ -44,7 +44,7 @@
           <button
             type="button"
             class="btn btn-neutral"
-            @click="($emit('close'), (errors.title = ''), (errors.description = ''))"
+            @click="($emit('close'))"
           >
             {{ t('common.cancel') }}
           </button>
@@ -66,7 +66,7 @@ defineProps({
   event: Object,
   workOptions: Array,
 })
-defineEmits(['add-event', 'close'])
+const emit = defineEmits(['add-event', 'close'])
 
 const errors = reactive({
   title: '',
@@ -74,11 +74,7 @@ const errors = reactive({
 })
 
 const handleAddEvent = () => {
-  errors.title = event.title?.trim() ? '' : t('errors.empty_field')
-  errors.description = event.description?.trim() ? '' : t('errors.empty_field')
 
-  // Если есть ошибки — не эмитим событие
-  if (errors.title || errors.description) return
 
   emit('add-event')
 }

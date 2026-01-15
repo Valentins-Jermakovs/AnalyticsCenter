@@ -5,9 +5,6 @@
     <notes-header @new-note="openCreate" />
 
     <div class="w-full bg-base-200 border border-base-300 p-5 flex flex-col gap-4">
-
-
-
       <!-- notes list -->
       <div class="bg-base-100 rounded-box p-4 border border-base-300
         flex flex-col gap-3 flex-1 overflow-auto">

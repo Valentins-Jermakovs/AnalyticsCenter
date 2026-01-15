@@ -22,13 +22,10 @@
           <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
         </button>
         <!-- add note -->
-      <button class="btn btn-primary btn-square self-end sm:self-auto" @click="$emit('new-note')">
-        <font-awesome-icon icon="fa-solid fa-plus" />
-      </button>
+        <button class="btn btn-primary btn-square self-end sm:self-auto" @click="$emit('new-note')">
+          <font-awesome-icon icon="fa-solid fa-plus" />
+        </button>
       </div>
-
-      
-
     </div>
   </div>
 </template>

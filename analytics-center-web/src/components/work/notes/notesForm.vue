@@ -1,5 +1,5 @@
 <template>
-  <form class="flex flex-col gap-4" @submit.prevent="submit">
+  <form class="flex flex-col gap-4 w-full" @submit.prevent="submit">
 
     <!-- Title -->
     <div class="form-control flex flex-col gap-1">

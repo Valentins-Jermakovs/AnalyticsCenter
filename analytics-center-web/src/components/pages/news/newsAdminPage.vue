@@ -36,7 +36,7 @@
       @confirm="saveNews"
       @cancel="closeCreateModal"
     >
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2 w-full">
         <p v-if="creationError" class="text-error text-sm">
           {{ creationError }}
         </p>
