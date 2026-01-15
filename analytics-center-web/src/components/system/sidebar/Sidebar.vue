@@ -35,14 +35,14 @@ const menu = [
     routeName: 'news',
   },
   {
-    titleKey: 'system.sidebar.library',
-    icon: 'fa-solid fa-book',
-    routeName: 'library',
-  },
-  {
     titleKey: 'system.sidebar.calendar',
     icon: 'fa-solid fa-calendar',
     routeName: 'calendar',
+  },
+  {
+    titleKey: 'system.sidebar.work',
+    icon: 'fa-solid fa-check-to-slot',
+    routeName: 'work',
   },
   {
     titleKey: 'system.sidebar.notifications',
@@ -55,29 +55,9 @@ const menu = [
     routeName: 'pomodoro',
   },
   {
-    titleKey: 'system.sidebar.notes',
-    icon: 'fa-solid fa-sticky-note',
-    routeName: 'notes',
-  },
-  {
-    titleKey: 'system.sidebar.analytics',
-    icon: 'fa-solid fa-eye',
-    routeName: 'analytics',
-  },
-  {
-    titleKey: 'system.sidebar.archive',
-    icon: 'fa-solid fa-archive',
-    routeName: 'archive',
-  },
-  {
     titleKey: 'system.sidebar.data_analyzer',
     icon: 'fa-solid fa-chart-pie',
     routeName: 'dataAnalyzer',
-  },
-  {
-    titleKey: 'system.sidebar.data_compare',
-    icon: 'fa-solid fa-chart-line',
-    routeName: 'dataCompare',
   },
 ]
 </script>

@@ -9,7 +9,7 @@
       <logo></logo>
     </div>
     <!-- Date & Time -->
-    <div class="flex gap-3 rounded-field bg-base-200 font-semibold">
+    <div class="hidden lg:flex gap-3 rounded-field bg-base-200 font-semibold">
       <!-- DATE -->
       <h1>
         {{ date }}

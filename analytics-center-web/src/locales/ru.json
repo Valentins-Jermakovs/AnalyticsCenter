@@ -88,7 +88,8 @@
       "data_analyzer": "Анализатор данных",
       "data_compare": "Сравнение данных",
       "notifications": "Уведомления",
-      "pomodoro": "Помодоро"
+      "pomodoro": "Помодоро",
+      "work": "Работа"
     },
     "dashboard": {
       "home": {
@@ -294,6 +295,23 @@
         "october": "Октябрь",
         "november": "Ноябрь",
         "december": "Декабрь"
+      }
+    },
+    "work": {
+      "title": "Рабочий процесс",
+      "notes": "Заметки",
+      "kanban": "Канбан доска",
+      "projects": "Проекты",
+      "notes_page": {
+        "header_title": "Мои заметки",
+        "modal_title": "Создать заметку",
+        "note_title": "Название заметки",
+        "note_title_placeholder": "Введите название заметки...",
+        "note_description": "Содержание заметки",
+        "note_description_placeholder": "Введите содержание заметки...",
+        "note_edit_title": "Редактировать заметку",
+        "note_delete_title": "Удалить заметку?",
+        "note_delete_content": "Вы действительно хотите удалить эту заметку?"
       }
     }
   },

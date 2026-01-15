@@ -88,7 +88,8 @@
       "data_analyzer": "Datu analizators",
       "data_compare": "Datu salīdzināšana",
       "notifications": "Atgādinājumi",
-      "pomodoro": "Pomodoro"
+      "pomodoro": "Pomodoro",
+      "work": "Darbs"
     },
     "dashboard": {
       "home": {
@@ -294,6 +295,23 @@
         "october": "Oktobris",
         "november": "Novembris",
         "december": "Decembris"
+      }
+    },
+    "work": {
+      "title": "Darba plūsma",
+      "notes": "Piezīmes",
+      "kanban": "Kanban",
+      "projects": "Projekti",
+      "notes_page": {
+        "header_title": "Manas piezīmes",
+        "modal_title": "Izveidot piezīmi",
+        "note_title": "Piezīmes nosaukums",
+        "note_title_placeholder": "Ievadi piezīmes nosaukumu...",
+        "note_description": "Piezīmes saturs",
+        "note_description_placeholder": "Ievadi piezīmes saturu...",
+        "note_edit_title": "Rediģēt piezīmi",
+        "note_delete_title": "Dzēst piezīmi?",
+        "note_delete_content": "Vai tiešām vēlaties dzēst piezīmi?"
       }
     }
   },

@@ -58,22 +58,6 @@ const router = createRouter({
           },
         },
         {
-          path: 'analytics',
-          name: 'analytics',
-          component: () => import('@/views/system/AnalyticsView.vue'),
-          meta: {
-            title: 'Analytics',
-          },
-        },
-        {
-          path: 'notes',
-          name: 'notes',
-          component: () => import('@/views/system/NotesView.vue'),
-          meta: {
-            title: 'Notes',
-          },
-        },
-        {
           path: 'dataAnalyzer',
           name: 'dataAnalyzer',
           component: () => import('@/views/system/DataAnalyzerView.vue'),
@@ -93,14 +77,6 @@ const router = createRouter({
               component: () => import('@/components/pages/dataAnalyzer/visualisationPage.vue'),
             },
           ],
-        },
-        {
-          path: 'dataCompare',
-          name: 'dataCompare',
-          component: () => import('@/views/system/DataCompareView.vue'),
-          meta: {
-            title: 'Data Compare',
-          },
         },
         {
           path: 'calendar',
@@ -127,22 +103,6 @@ const router = createRouter({
           },
         },
         {
-          path: 'archive',
-          name: 'archive',
-          component: () => import('@/views/system/ArchiveView.vue'),
-          meta: {
-            title: 'Archive',
-          },
-        },
-        {
-          path: 'library',
-          name: 'library',
-          component: () => import('@/views/system/LibraryView.vue'),
-          meta: {
-            title: 'Library',
-          },
-        },
-        {
           path: 'news',
           name: 'news',
           component: () => import('@/views/system/NewsView.vue'),
@@ -160,6 +120,14 @@ const router = createRouter({
               props: true,
             },
           ],
+        },
+        {
+          path: 'work',
+          name: 'work',
+          component: () => import('@/views/system/WorkView.vue'),
+          meta: {
+            title: 'Work',
+          },
         },
       ],
     },
