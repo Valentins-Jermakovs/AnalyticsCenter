@@ -1,52 +1,34 @@
 <template>
-  <div class="p-5 flex w-full h-full">
+  <div class="p-5 w-full flex flex-col gap-5">
+
+    <!-- header -->
+    <notes-header @new-note="openCreate" />
 
     <div class="w-full bg-base-200 border border-base-300 p-5 flex flex-col gap-4">
 
-      <!-- header -->
-      <notes-header @new-note="openCreate" />
+
 
       <!-- notes list -->
-      <div
-        class="bg-base-100 rounded-box p-4 border border-base-300
-        flex flex-col gap-3 flex-1 overflow-auto"
-      >
-        <note-item
-          v-for="item in notes"
-          :key="item.id"
-          :note="item"
-          @edit="openEdit"
-          @delete="openDelete"
-        />
+      <div class="bg-base-100 rounded-box p-4 border border-base-300
+        flex flex-col gap-3 flex-1 overflow-auto">
+        <note-item v-for="item in notes" :key="item.id" :note="item" @edit="openEdit" @delete="openDelete" />
       </div>
 
     </div>
 
     <!-- CREATE -->
     <BaseDialog v-model="noteModalOpen" :title="t('system.work.notes_page.modal_title')">
-      <NotesForm
-        @submit="createNote"
-        @cancel="noteModalOpen = false"
-      />
+      <NotesForm @submit="createNote" @cancel="noteModalOpen = false" />
     </BaseDialog>
 
     <!-- EDIT -->
     <BaseDialog v-model="editModalOpen" :title="t('system.work.notes_page.note_edit_title')">
-      <NotesForm
-        :initial-data="activeNote"
-        @submit="updateNote"
-        @cancel="closeEdit"
-      />
+      <NotesForm :initial-data="activeNote" @submit="updateNote" @cancel="closeEdit" />
     </BaseDialog>
 
     <!-- DELETE -->
-    <BaseDialog
-      v-model="deleteModalOpen"
-      title="Dzēst piezīmi?"
-      confirmText="Dzēst"
-      cancelText="Atcelt"
-      @confirm="confirmDelete"
-    >
+    <BaseDialog v-model="deleteModalOpen" title="Dzēst piezīmi?" confirmText="Dzēst" cancelText="Atcelt"
+      @confirm="confirmDelete">
       <p class="text-sm opacity-80">
         Vai tiešām vēlies dzēst šo piezīmi?
       </p>
@@ -134,5 +116,4 @@ const confirmDelete = () => {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

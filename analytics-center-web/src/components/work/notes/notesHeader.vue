@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col gap-4 px-4 md:flex-row md:items-center md:gap-6">
+  <div class="w-full bg-base-200 border border-base-300 p-5 flex flex-col gap-4 md:flex-row md:items-center md:gap-6">
 
     <!-- LEFT: title -->
     <div class="flex items-center gap-3 shrink-0">
@@ -21,12 +21,13 @@
         <button class="btn btn-square btn-secondary shrink-0">
           <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
         </button>
-      </div>
-
-      <!-- add note -->
+        <!-- add note -->
       <button class="btn btn-primary btn-square self-end sm:self-auto" @click="$emit('new-note')">
         <font-awesome-icon icon="fa-solid fa-plus" />
       </button>
+      </div>
+
+      
 
     </div>
   </div>
